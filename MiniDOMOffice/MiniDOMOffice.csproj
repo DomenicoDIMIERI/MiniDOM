@@ -1,0 +1,550 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1DA1E6C8-7D0C-00E5-28AF-E84C316D669D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>minidom</RootNamespace>
+    <AssemblyName>MiniDOMOffice</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <DefaultItemExcludes>$(DefaultItemExcludes);$(ProjectDir)**\*.vb</DefaultItemExcludes>
+    <LangVersion>latest</LangVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>bin\Debug\MiniDOMOffice.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>bin\Release\MiniDOMOffice.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>0</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DocumentationFile>bin\x86\Debug\MiniDOMOffice.xml</DocumentationFile>
+    <Optimize>false</Optimize>
+    <NoWarn>
+    </NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>0</WarningLevel>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DocumentationFile>bin\x86\Release\MiniDOMOffice.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>0</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DocumentationFile>bin\x64\Debug\MiniDOMOffice.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>0</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DocumentationFile>bin\x64\Release\MiniDOMOffice.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>0</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ADVs\Handlers\IHandlerTipoCampagna.cs" />
+    <Compile Include="CRM\Chat\RoomsXUser\UsersXRooms.cs" />
+    <Compile Include="CRM\Interazioni\CContattiRepositoryT.cs" />
+    <Compile Include="CRM\Interazioni\CContattiRepository.cs" />
+    <Compile Include="CRM\Statistiche\CRMStatisticheRepository.cs" />
+    <Compile Include="CRM\Statistiche\StatisticheOperatore\CRMStatisticheOperatoreRepository.cs" />
+    <Compile Include="CRM\Statistiche\StatisticheXPersona\CRMStatistichePersonaRepository.cs" />
+    <Compile Include="Magazzino\Articolo\ArticoloInMagazzino\ArticoloInMagazzinoRepository.cs" />
+    <Compile Include="Magazzino\Articolo\ArticoloXListino\ArticoloXListinoRepository.cs" />
+    <Compile Include="Magazzino\Articolo\AttributiArticolo\AttributoArticoloRepository.cs" />
+    <Compile Include="Magazzino\Articolo\CategorieArticolo\AttributiCategoria\AttributoCategoriaRepository.cs" />
+    <Compile Include="Magazzino\Articolo\CodiciArticolo\CodiceArticoloRepository.cs" />
+    <Compile Include="Magazzino\Inventario\AttributiOggetto\AttributiOggettoRepository.cs" />
+    <Compile Include="Magazzino\Inventario\Collegamenti\OggettiCollegatiRepository.cs" />
+    <Compile Include="Office\Circolari\Alerts\NotificaUtenteXCircolareRepository.cs" />
+    <Compile Include="Office\Circolari\CommXGroup\CircolareXGroupCollection.cs" />
+    <Compile Include="Office\Circolari\CommXUser\CircolareXUserCollection.cs" />
+    <Compile Include="Office\Commissioni\CalendarProviders\CommissioniCalProvider.cs" />
+    <Compile Include="Office\EstrattiContributivi\CalendarProvider\EstrattiContributiviCalProvider.cs" />
+    <Compile Include="Office\GDE\DocumentiPerPersona\CDocCarPerPersonaCursor.cs" />
+    <Compile Include="Office\GDE\DocumentiPerPersona\CDocCarPerPersona.cs" />
+    <Compile Include="Office\GDE\DocumentiPerPersona\DocumentiCaricatiPerPersona.cs" />
+    <Compile Include="Tickets\CalendarProvider\CTicketsCalProvider.cs" />
+    <Compile Include="ADVs\ADV.cs" />
+    <Compile Include="ADVs\IndirizziBannati\ADVBannedAddressCollection.cs" />
+    <Compile Include="ADVs\Config\ADVConfig.cs" />
+    <Compile Include="ADVs\Campagne\Campagne.cs" />
+    <Compile Include="ADVs\Campagne\CCampagnaPubblicitaria.cs" />
+    <Compile Include="ADVs\Campagne\CCampagnaPubblicitariaCursor.cs" />
+    <Compile Include="ADVs\Handlers\HandlerTipoCampagna.cs" />
+    <Compile Include="ADVs\Handlers\HandlerTipoCampagnaEMail.cs" />
+    <Compile Include="ADVs\Handlers\HandlerTipoCampagnaFax.cs" />
+    <Compile Include="ADVs\Handlers\HandlerTipoCampagnaSMS.cs" />
+    <Compile Include="ADVs\Handlers\NullCampagnaADVHandler.cs" />
+    <Compile Include="ADVs\Risultati\CRisultatoCampagna.cs" />
+    <Compile Include="ADVs\Risultati\CRisultatoCampagnaCursor.cs" />
+    <Compile Include="ADVs\Risultati\RisultatiCampagna.cs" />
+    <Compile Include="CRM\Calendar\CRMCalendarProvider.cs" />
+    <Compile Include="CRM\Interazioni\FaxDocuments\CRMProvider\CRMCalProvider.cs" />
+    <Compile Include="CRM\Chat\CChatUser.cs" />
+    <Compile Include="CRM\Chat\Messages\CMessage.cs" />
+    <Compile Include="CRM\Chat\Messages\CMessagesCursor.cs" />
+    <Compile Include="CRM\Chat\Messages\Messages.cs" />
+    <Compile Include="CRM\Chat\RoomsXUser\CChatRoomUser.cs" />
+    <Compile Include="CRM\Chat\RoomsXUser\CChatRoomUserCursor.cs" />
+    <Compile Include="CRM\Chat\Rooms\CChatRoom.cs" />
+    <Compile Include="CRM\Chat\Rooms\CChatRoomCursor.cs" />
+    <Compile Include="CRM\Chat\Rooms\Rooms.cs" />
+    <Compile Include="CRM\Interazioni\Appunti\Appunti.cs" />
+    <Compile Include="CRM\Interazioni\Appunti\CAppuntiCursor.cs" />
+    <Compile Include="CRM\Interazioni\Appunti\CAppunto.cs" />
+    <Compile Include="CRM\AzioniProposte\CAzioneChiama.cs" />
+    <Compile Include="CRM\AzioniProposte\CAzioneProposta.cs" />
+    <Compile Include="CRM\AzioniProposte\CAzioneRicontatto.cs" />
+    <Compile Include="CRM\CRM\Azioni\PrendiInCaricoRicontatto.cs" />
+    <Compile Include="CRM\Interazioni\Visite\Azioni\VisitaInAttesaAction.cs" />
+    <Compile Include="CRM\BlackList\BlackListAddress.cs" />
+    <Compile Include="CRM\BlackList\BlackListAddressCursor.cs" />
+    <Compile Include="CRM\BlackList\BlackListAddresses.cs" />
+    <Compile Include="CRM\CCampagnaCRM\CCampagnaCRM.cs" />
+    <Compile Include="CRM\CCampagnaCRM\CCampagnaCRMCursor.cs" />
+    <Compile Include="CRM\CCampagnaCRM\AllowNegate\CCampagnaXGroupAllowNegate.cs" />
+    <Compile Include="CRM\CCampagnaCRM\AllowNegate\CCampagnaXUserAllowNegate.cs" />
+    <Compile Include="CRM\CCampagnaCRM\CCmpagneCRMClass.cs" />
+    <Compile Include="CRM\CCampagnaCRM\PausaCRM\CPausaCRM.cs" />
+    <Compile Include="CRM\CCampagnaCRM\PausaCRM\CPausaCRMCursor.cs" />
+    <Compile Include="CRM\CCampagnaCRM\PausaCRM\CPauseCRMClass.cs" />
+    <Compile Include="CRM\CCampagnaCRM\SessioneCRM\CSessioneCRM.cs" />
+    <Compile Include="CRM\CCampagnaCRM\SessioneCRM\CSessioneCRMCursor.cs" />
+    <Compile Include="CRM\CCampagnaCRM\SessioneCRM\CSessioniCRMClass.cs" />
+    <Compile Include="CRM\Interazioni\_Comparers\CContattoComparer.cs" />
+    <Compile Include="CRM\Interazioni\CContattoUtente.cs" />
+    <Compile Include="CRM\Configuration\CCRMConfig.cs" />
+    <Compile Include="CRM\Interazioni\CContattoUtenteCursor.cs" />
+    <Compile Include="CRM\FindFilters\CRMFindFilter.cs" />
+    <Compile Include="CRM\Statistiche\_Aggregation\CRMStatsAggregation.cs" />
+    <Compile Include="CRM\CRM\CustomerCalls.cs" />
+    <Compile Include="CRM\Interazioni\eMails\EMailMessage.cs" />
+    <Compile Include="CRM\Interazioni\eMails\EMailMessages.cs" />
+    <Compile Include="CRM\Interazioni\eMails\EMailMessagesCursor.cs" />
+    <Compile Include="CRM\Interazioni\FaxDocuments\FAX.cs" />
+    <Compile Include="CRM\Interazioni\FaxDocuments\FaxDocument.cs" />
+    <Compile Include="CRM\Interazioni\FaxDocuments\FaxDocumentsCursor.cs" />
+    <Compile Include="CRM\Fonti\RicontattiFonteProvider.cs" />
+    <Compile Include="CRM\Interazioni\SMS\SMS.cs" />
+    <Compile Include="CRM\Interazioni\SMS\SMSMessage.cs" />
+    <Compile Include="CRM\Interazioni\SMS\SMSMessageCursor.cs" />
+    <Compile Include="CRM\Statistiche\ContattiInAttesa\ContattoInAttesaInfo.cs" />
+    <Compile Include="CRM\Statistiche\_Statistica\CStatisticheOperazione.cs" />
+    <Compile Include="CRM\Statistiche\StatisticheOperatore\CRMStatisticheOperatore.cs" />
+    <Compile Include="CRM\Statistiche\StatisticheOperatore\CRMStatisticheOperatoreCursor.cs" />
+    <Compile Include="CRM\Statistiche\StatisticheXPeriodo\CPersonaXPeriodo.cs" />
+    <Compile Include="CRM\Statistiche\StatisticheXPersona\CRMStatistichePersona.cs" />
+    <Compile Include="CRM\Statistiche\StatisticheXPersona\Watchdogs\CPersonWatchCond.cs" />
+    <Compile Include="CRM\Statistiche\StatisticheXPersona\CRMStatistichePersonaCursor.cs" />
+    <Compile Include="CRM\StoricoAction\StoricoAction.cs" />
+    <Compile Include="CRM\StoricoHandlers\IStoricoHandler.cs" />
+    <Compile Include="ADVs\StoricoActions\StoricoHandlerADV.cs" />
+    <Compile Include="CRM\StoricoHandlers\StoricoHandlerBase.cs" />
+    <Compile Include="CRM\Interazioni\StoricoActions\StoricoHandlerContatti.cs" />
+    <Compile Include="CRM\StoricoHandlers\StoricoHandlerTasks.cs" />
+    <Compile Include="CRM\Interazioni\Telefonate\CTelefonata.cs" />
+    <Compile Include="CRM\Interazioni\Telefonate\CTelefonateCursor.cs" />
+    <Compile Include="CRM\Interazioni\Telefonate\Telefonate\CTelefonatePersona.cs" />
+    <Compile Include="CRM\Interazioni\Telefonate\Telefonate.cs" />
+    <Compile Include="CRM\Interazioni\Telegrammi\CTelegramma.cs" />
+    <Compile Include="CRM\Interazioni\Telegrammi\CTelegrammiCursor.cs" />
+    <Compile Include="CRM\Interazioni\Telegrammi\Telegrammi.cs" />
+    <Compile Include="CRM\Templates\CContattoUtenteTemplate.cs" />
+    <Compile Include="CRM\Templates\CContattoUtenteTemplatesCursor.cs" />
+    <Compile Include="CRM\Templates\ContattoUtenteTemplates.cs" />
+    <Compile Include="CRM\Interazioni\_ContattiTrasferiti\TrasferimentoContatto.cs" />
+    <Compile Include="CRM\Interazioni\Visite\CVisita.cs" />
+    <Compile Include="CRM\Interazioni\Visite\CVisiteCursor.cs" />
+    <Compile Include="CRM\Interazioni\Visite\Visite.cs" />
+    <Compile Include="Contabilita\VociPerDocumento\VociDiPagamentoPerDocumento.cs" />
+    <Compile Include="Contabilita\DocumentiContabiliRepository.cs" />
+    <Compile Include="Contabilita\DocumentoContabileCursor.cs" />
+    <Compile Include="Contabilita\VociPagamento\VociDiPagamento.cs" />
+    <Compile Include="Contabilita\VociPagamento\VoceDiPagamento.cs" />
+    <Compile Include="Contabilita\VociPagamento\VoceDiPagamentoCursor.cs" />
+    <Compile Include="Office\Spedizioni\Storico\StoricoHandlerOggettiSpedire.cs" />
+    <Compile Include="Office\Veicolo\CRMHandler\FindPersonaByTargaVeicolo.cs" />
+    <Compile Include="Office\EstrattiContributivi\Storico\StoricoHandlerEstrattiContributivi.cs" />
+    <Compile Include="CRM\Interazioni\eMails\Storico\StoricoHandlerEMails.cs" />
+    <Compile Include="Magazzino\Articolo\CategorieArticolo\AttributiCategoria\Collection\AttributiCategoriaCollection.cs" />
+    <Compile Include="Magazzino\Articolo\CategorieArticolo\AttributiCategoria\AttributoCategoria.cs" />
+    <Compile Include="Magazzino\Articolo\CategorieArticolo\AttributiCategoria\AttributoCategoriaCursor.cs" />
+    <Compile Include="Office\Mail\Address\MailAddressCursor.cs" />
+    <Compile Include="Office\Mail\Address\MailAddressCollection.cs" />
+    <Compile Include="Office\Mail\Address\MailAddress.cs" />
+    <Compile Include="Office\Mail\Application\MailApplicationAccounts.cs" />
+    <Compile Include="Office\Mail\Application\CMailApplications.cs" />
+    <Compile Include="Office\Mail\Application\MailApplicationCursor.cs" />
+    <Compile Include="Office\Mail\Application\MailRootFolder.cs" />
+    <Compile Include="Office\Mail\Attachment\CMailAttachments.cs" />
+    <Compile Include="Office\Mail\DownloadWorker.cs" />
+    <Compile Include="Office\Mail\EventArgs\DownloadErrorEventArgs.cs" />
+    <Compile Include="Office\Mail\Folders\CFoldersClass.cs" />
+    <Compile Include="Office\Mail\Rules\MailApplicationRules.cs" />
+    <Compile Include="Office\Mail\Rules\MailRuleBase.cs" />
+    <Compile Include="Office\Mail\Rules\MailRule.cs" />
+    <Compile Include="Office\Mail\PresoneXEMail\PersonaPerEMail.cs" />
+    <Compile Include="Office\Mail\PresoneXEMail\PersonePerEMailCursor.cs" />
+    <Compile Include="Office\Circolari\Alerts\NotificaUtenteXCircolare.cs" />
+    <Compile Include="Office\Circolari\Alerts\NotificaUtenteXCircolareCursor.cs" />
+    <Compile Include="Office\Circolari\Circolare.cs" />
+    <Compile Include="Office\Circolari\CircolariCursor.cs" />
+    <Compile Include="Office\Circolari\CommXUser\CircolareXUser.cs" />
+    <Compile Include="Office\Circolari\CommXUser\CircolareXUserCursor.cs" />
+    <Compile Include="Office\Circolari\CircolariRepository.cs" />
+    <Compile Include="Office\Circolari\CommXGroup\CircolareXGroup.cs" />
+    <Compile Include="Office\Circolari\CommXGroup\CircolareXGroupCursor.cs" />
+    <Compile Include="Office\Commissioni\Commissioni.cs" />
+    <Compile Include="Office\Commissioni\Commissione.cs" />
+    <Compile Include="Office\Commissioni\CommissioneCursor.cs" />
+    <Compile Include="Tickets\Messages\CTicketAnswaresRepository.cs" />
+    <Compile Include="Tickets\Storico\StoricoHandlerTickets.cs" />
+    <Compile Include="Office\RichiesteCERQ\Storico\StoricoHandlerRichiesteCERQ.cs" />
+    <Compile Include="Office\Commissioni\Storico\StoricoHandlerCommissioni.cs" />
+    <Compile Include="Magazzino\Articolo\Articolo.cs" />
+    <Compile Include="Magazzino\Articolo\ArticoloCursor.cs" />
+    <Compile Include="Magazzino\Articolo\Articoli.cs" />
+    <Compile Include="Magazzino\Articolo\AttributiArticolo\Collection\AttributiArticoloCollection.cs" />
+    <Compile Include="Magazzino\Articolo\AttributiArticolo\AttributoArticolo.cs" />
+    <Compile Include="Magazzino\Articolo\AttributiArticolo\AttributoArticoloCursor.cs" />
+    <Compile Include="Magazzino\Inventario\AttributiOggetto\Collection\AttributiOggettoCollection.cs" />
+    <Compile Include="Magazzino\Articolo\CodiciArticolo\Collection\CCodiciPerArticolo.cs" />
+    <Compile Include="Magazzino\Articolo\ArticoloInMagazzino\ArticoloInMagazzino.cs" />
+    <Compile Include="Magazzino\Articolo\ArticoloInMagazzino\ArticoloInMagazzinoCursor.cs" />
+    <Compile Include="Magazzino\Articolo\ArticoloXListino\ArticoloXListino.cs" />
+    <Compile Include="Magazzino\Articolo\ArticoloXListino\ArticoloXListinoCursor.cs" />
+    <Compile Include="Magazzino\Inventario\AttributiOggetto\AttributoOggetto.cs" />
+    <Compile Include="Magazzino\Inventario\AttributiOggetto\AttributoOggettoCursor.cs" />
+    <Compile Include="Magazzino\Articolo\CategorieArticolo\CategorieArticoli.cs" />
+    <Compile Include="Magazzino\Articolo\CategorieArticolo\CategoriaArticolo.cs" />
+    <Compile Include="Magazzino\Articolo\CategorieArticolo\CategoriaArticoloCursor.cs" />
+    <Compile Include="Magazzino\Articolo\CategorieArticolo\Sottocategorie\SottocategorieCollection.cs" />
+    <Compile Include="Magazzino\Inventario\Collegamenti\Collection\OggettoCollegatiCollection.cs" />
+    <Compile Include="Magazzino\Inventario\Collegamenti\OggettoCollegato.cs" />
+    <Compile Include="Magazzino\Inventario\Collegamenti\OggettoCollegatoCursor.cs" />
+    <Compile Include="Magazzino\Articolo\CodiciArticolo\CodiceArticolo.cs" />
+    <Compile Include="Magazzino\Articolo\CodiciArticolo\CodiceArticoloCursor.cs" />
+    <Compile Include="Magazzino\Inventario\OggettoInventariatoCursor.cs" />
+    <Compile Include="Magazzino\Inventario\OggettiInventariati.cs" />
+    <Compile Include="Magazzino\Inventario\OggettoInventariato.cs" />
+    <Compile Include="Office\Dispositivi\DeviceLog\DeviceLog.cs" />
+    <Compile Include="Office\Dispositivi\DeviceLog\DevicesLog.cs" />
+    <Compile Include="Office\Dispositivi\DeviceLog\DeviceLogCursor.cs" />
+    <Compile Include="Office\GDE\Templates\DocumentTemplateCursor.cs" />
+    <Compile Include="Office\GDE\Templates\DocumentTemplate.cs" />
+    <Compile Include="Office\GDE\TemplateRenderer\DocumentRendererBase.cs" />
+    <Compile Include="Office\GDE\Templates\Items\TemplateItem.cs" />
+    <Compile Include="Office\GDE\Templates\Items\TemplateItemsCollection.cs" />
+    <Compile Include="Office\Lavoro\Candidature\Candidatura.cs" />
+    <Compile Include="Office\Lavoro\Candidature\CandidaturaCursor.cs" />
+    <Compile Include="Office\Lavoro\Candidature\Candidature.cs" />
+    <Compile Include="Office\Lavoro\Curricula\CurriculumCursor.cs" />
+    <Compile Include="Office\Lavoro\Curricula\Curricula.cs" />
+    <Compile Include="Office\Lavoro\OfferteDiLavoro\OfferteDiLavoro.cs" />
+    <Compile Include="Office\Lavoro\OfferteDiLavoro\OffertaDiLavoroCursor.cs" />
+    <Compile Include="Office\Lavoro\OfferteDiLavoro\OffertaDiLavoro.cs" />
+    <Compile Include="Office\Lavoro\Curricula\Curriculum.cs" />
+    <Compile Include="Office\DefinizionePercorsi\LuoghiXPercorso\LuoghiDefinitiPerPercorso.cs" />
+    <Compile Include="Office\Dispositivi\ClassiDispositivo\ClassiDispositivi.cs" />
+    <Compile Include="Office\Dispositivi\ClassiDispositivo\ClasseDispositivo.cs" />
+    <Compile Include="Office\Dispositivi\ClassiDispositivo\ClassiDispositivoCursor.cs" />
+    <Compile Include="Office\GDE\TipologiaDocumeni\DocumentoCaricato.cs" />
+    <Compile Include="Office\GDE\TipologiaDocumeni\DocumentiCaricatiCursor.cs" />
+    <Compile Include="Office\GDE\TipologiaDocumeni\DocumentiCaricati.cs" />
+    <Compile Include="Office\GDE\GDE.cs" />
+    <Compile Include="Office\GDE\Templates\Templates.cs" />
+    <Compile Include="Office\Uscite\LuoghiVisitati\LuogoVisitato.cs" />
+    <Compile Include="Office\Uscite\LuoghiVisitati\LuoghiVisitatiCursor.cs" />
+    <Compile Include="Office\Uscite\LuoghiVisitati\LuoghiVisitati.cs" />
+    <Compile Include="Office\EstrattiContributivi\EstrattoContributivo.cs" />
+    <Compile Include="Office\EstrattiContributivi\EstrattiContributiviCursor.cs" />
+    <Compile Include="Office\EstrattiContributivi\EstrattiContributivi.cs" />
+    <Compile Include="Magazzino\Listino\Listino.cs" />
+    <Compile Include="Magazzino\Listino\ListinoCursor.cs" />
+    <Compile Include="Magazzino\Listino\Listini.cs" />
+    <Compile Include="Magazzino\Magazzino\Magazzini.cs" />
+    <Compile Include="Magazzino\Magazzino\Magazzino.cs" />
+    <Compile Include="Magazzino\Magazzino\MagazzinoCursor.cs" />
+    <Compile Include="Magazzino\Marca\MarcaArticolo.cs" />
+    <Compile Include="Magazzino\Marca\MarcaArticoloCursor.cs" />
+    <Compile Include="Magazzino\Marca\MarcheArticoli.cs" />
+    <Compile Include="Office\RichiesteCERQ\MotiviRichieste\IRichiestaHander.cs" />
+    <Compile Include="Office\Software\LicenzeSoftware\LicenzaSoftware.cs" />
+    <Compile Include="Office\Software\LicenzeSoftware\LicenzeSoftwareCursor.cs" />
+    <Compile Include="Office\Software\LicenzeSoftware\LicenzeSoftware.cs" />
+    <Compile Include="Office\Software\Softwares.cs" />
+    <Compile Include="Office\Software\Software.cs" />
+    <Compile Include="Office\Software\SoftwareCursor.cs" />
+    <Compile Include="Office\Spedizioni\OggettiDaSpedire\OggettiDaSpedireCursor.cs" />
+    <Compile Include="Office\Spedizioni\OggettiDaSpedire\OggettoDaSpedire.cs" />
+    <Compile Include="Office\Spedizioni\OggettiDaSpedire\OggettiDaSpedire.cs" />
+    <Compile Include="Office\Spedizioni\Passaggi\PassaggioDiSpedizione.cs" />
+    <Compile Include="Office\Spedizioni\Spedizione.cs" />
+    <Compile Include="Office\Spedizioni\Spedizioni.cs" />
+    <Compile Include="Office\Spedizioni\SpedizioniCursor.cs" />
+    <Compile Include="Office\StickyNotes\StickyNote.cs" />
+    <Compile Include="Office\StickyNotes\StickyNotesCursor.cs" />
+    <Compile Include="Office\StickyNotes\StickyNotes.cs" />
+    <Compile Include="Office\Uscite\Reports\RUStats.cs" />
+    <Compile Include="Office\Uscite\Reports\RUStatItem.cs" />
+    <Compile Include="Office\Uscite\Reports\RUStatVeicolo.cs" />
+    <Compile Include="PBX\PBX\PBX.cs" />
+    <Compile Include="PBX\PBX\PBXCursor.cs" />
+    <Compile Include="PBX\PBX\PBXs.cs" />
+    <Compile Include="Presenze\RichiestePermessiFerie\RichiestePermessiFerie.cs" />
+    <Compile Include="Presenze\RichiestePermessiFerie\RichiestaPermessoFerie.cs" />
+    <Compile Include="Presenze\RichiestePermessiFerie\RichiestaPermessoFerieCursor.cs" />
+    <Compile Include="Presenze\OreLavorate\PeriodiLavorati.cs" />
+    <Compile Include="Presenze\OreLavorate\PeriodoLavoratoCursor.cs" />
+    <Compile Include="Presenze\OreLavorate\PeriodoLavorato.cs" />
+    <Compile Include="Presenze\Turni\Turno.cs" />
+    <Compile Include="Presenze\Turni\Turni.cs" />
+    <Compile Include="Presenze\Turni\TurniCursor.cs" />
+    <Compile Include="Presenze\RilevatoriPresenze\RilevatoriPresenze.cs" />
+    <Compile Include="Presenze\RilevatoriPresenze\RilevatorePresenze.cs" />
+    <Compile Include="Presenze\RilevatoriPresenze\RilevatoriPresenzeCursor.cs" />
+    <Compile Include="PBX\RegistroChiamate\ChiamateRegistrate.cs" />
+    <Compile Include="PBX\RegistroChiamate\StoricoHandlers\StoricoHandlerCR.cs" />
+    <Compile Include="PBX\RegistroChiamate\ChiamataRegistrataCursor.cs" />
+    <Compile Include="PBX\RegistroChiamate\ChiamataRegistrata.cs" />
+    <Compile Include="Office\CartucceToner\CartucciaToner.cs" />
+    <Compile Include="Office\CartucceToner\CartucceToner.cs" />
+    <Compile Include="Office\CartucceToner\CartucceTonerCursor.cs" />
+    <Compile Include="Scansioni\Scansioni.cs" />
+    <Compile Include="Scansioni\ScansioniCursor.cs" />
+    <Compile Include="Scansioni\Scansione.cs" />
+    <Compile Include="Tickets\Messages\CTicketAnswaresCollection.cs" />
+    <Compile Include="Tickets\Messages\CTicketAnswareCursor.cs" />
+    <Compile Include="Tickets\Messages\CTicketAnsware.cs" />
+    <Compile Include="Tickets\CTicket.cs" />
+    <Compile Include="Tickets\CTicketCursor.cs" />
+    <Compile Include="Tickets\Tickets.cs" />
+    <Compile Include="Tickets\TicketsCategory\CTicketCategory.cs" />
+    <Compile Include="Tickets\TicketsCategory\CTicketCategoryCursor.cs" />
+    <Compile Include="Tickets\TicketsCategory\TicketCategories.cs" />
+    <Compile Include="Contabilita\DocumentoContabile.cs" />
+    <Compile Include="Utenze\IUtenzaBollettaHandler.cs" />
+    <Compile Include="Utenze\Utenza.cs" />
+    <Compile Include="Utenze\UtenzeCursor.cs" />
+    <Compile Include="Utenze\Utenze.cs" />
+    <None Include="Office\PrimaNota\Eventi\PrimaNotaVersamentoEventArgs.cs" />
+    <Compile Include="Office\DefinizionePercorsi\PercorsoDefinito.cs" />
+    <Compile Include="Office\DefinizionePercorsi\PercorsiDefinitiCursor.cs" />
+    <Compile Include="Office\DefinizionePercorsi\PercorsiDefiniti.cs" />
+    <Compile Include="Office\DefinizionePercorsi\LuogoDaVisitare\LuoghiDaVisitare.cs" />
+    <Compile Include="Office\DefinizionePercorsi\LuogoDaVisitare\LuoghiDaVisitareCursor.cs" />
+    <Compile Include="Office\DefinizionePercorsi\LuogoDaVisitare\LuogoDaVisitare.cs" />
+    <Compile Include="Office\Mail\Accounts\MailAccount.cs" />
+    <Compile Include="Office\Mail\Accounts\MailAccountCursor.cs" />
+    <Compile Include="Office\Mail\Accounts\CMailAccounts.cs" />
+    <Compile Include="Office\Mail\CMailsClass.cs" />
+    <Compile Include="Office\Mail\Attachment\MailAttachment.cs" />
+    <Compile Include="Office\Mail\Attachment\MailAttachmentCollection.cs" />
+    <Compile Include="Office\Mail\Attachment\MailAttachmentCursor.cs" />
+    <Compile Include="Office\Mail\EventArgs\EmailEventArg.cs" />
+    <Compile Include="Office\Mail\Application\MailApplication.cs" />
+    <Compile Include="Office\Mail\Folders\MailFolder.cs" />
+    <Compile Include="Office\Mail\Folders\MailFolderChilds.cs" />
+    <Compile Include="Office\Mail\Folders\MailFolderCursor.cs" />
+    <Compile Include="Office\Mail\Folders\MailFoldersCollection.cs" />
+    <Compile Include="Office\Mail\Message\MailMessage.cs" />
+    <Compile Include="Office\Mail\Message\MailMessageCursor.cs" />
+    <Compile Include="Presenze\Marcature\MarcatureIngressoUscitaCursor.cs" />
+    <Compile Include="Presenze\Marcature\Marcature.cs" />
+    <Compile Include="Presenze\Marcature\MarcaturaIngressoUscita.cs" />
+    <Compile Include="Office\PrimaNota\Eventi\PrimaNotaSottoSogliaEventArgs.cs" />
+    <Compile Include="Office\Uscite\CommissioniPerUscita\CommissionePerUscita.cs" />
+    <Compile Include="Office\Uscite\CommissioniPerUscita\CommissioniPerUscitaCursor.cs" />
+    <Compile Include="Office\Uscite\CommissioniPerUscita\CommissioniPerUscite.cs" />
+    <Compile Include="Office\Uscite\CommissioniPerUscita\UscitePerCommissioneCollection.cs" />
+    <Compile Include="Office\Uscite\LuoghiVisitati\LuoghiVisitatiPerUscitaCollection.cs" />
+    <Compile Include="Office\Veicolo\Veicoli.cs" />
+    <Compile Include="Office\Veicolo\Veicolo.cs" />
+    <Compile Include="Office\Veicolo\VeicoliCursor.cs" />
+    <Compile Include="Office\Dispositivi\Dispositivo.cs" />
+    <Compile Include="Office\Dispositivi\DispositivoCursor.cs" />
+    <Compile Include="Office\Dispositivi\Dispositivi.cs" />
+    <Compile Include="Office\GPSRecord\GPSRecords.cs" />
+    <Compile Include="Office\GPSRecord\GPSRecord.cs" />
+    <Compile Include="Office\GPSRecord\GPSRecordCursor.cs" />
+    <Compile Include="Office\Commissioni\MotiviCommissioni\MotivoCommissione.cs" />
+    <Compile Include="Office\Commissioni\MotiviCommissioni\MotivoCommissioneCursor.cs" />
+    <Compile Include="Office\Commissioni\MotiviCommissioni\MotiviCommissioni.cs" />
+    <Compile Include="Office\PrimaNota\RigaPrimaNotaCursor.cs" />
+    <Compile Include="Office\RichiesteCERQ\MotiviRichieste\MotiviRichieste.cs" />
+    <Compile Include="Office\RichiesteCERQ\MotiviRichieste\MotivoRichiesta.cs" />
+    <Compile Include="Office\RichiesteCERQ\MotiviRichieste\MotivoRichiestaCursor.cs" />
+    <Compile Include="Office\RichiesteCERQ\RichiestaCERQ.cs" />
+    <Compile Include="Office\RichiesteCERQ\RichiestaCERQCursor.cs" />
+    <Compile Include="Office\RichiesteCERQ\RichiesteCERQ.cs" />
+    <Compile Include="Office\Ufficio.cs" />
+    <Compile Include="Office\PrimaNota\PrimaNota.cs" />
+    <Compile Include="Office\PrimaNota\RigaPrimaNota.cs" />
+    <Compile Include="Office\Visure\Visura.cs" />
+    <Compile Include="Office\Visure\Visure.cs" />
+    <Compile Include="Office\Visure\VisureCursor.cs" />
+    <Compile Include="_Project\AssemblyInfo.cs" />
+    <Compile Include="_Project\Application.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Office\Uscite\CommissioniPerUscita\CommissioniPerUscitaCollection.cs" />
+    <Compile Include="Office\Uscite\Uscita.cs" />
+    <Compile Include="Office\Uscite\UsciteCursor.cs" />
+    <Compile Include="Office\Uscite\UsciteRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>minidom.My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="_Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Office\LuoghiVisitati\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="templates\maildb.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\CommonProjects\DMDCore\DMDCore.csproj">
+      <Project>{6bc7376f-f45b-4e4b-be89-8d8378a6384c}</Project>
+      <Name>DMDCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CommonProjects\DMDFAXService\DMDFAXService.csproj">
+      <Project>{d1361a1e-e6d0-4f02-8374-8bf6a9aa8bd1}</Project>
+      <Name>DMDFAXService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CommonProjects\DMDGPSLib\DMDGPSLib.csproj">
+      <Project>{f3db82a0-8bbf-43be-a79e-9658bea40a59}</Project>
+      <Name>DMDGPSLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CommonProjects\DMDNetLib\DMDNetLib.csproj">
+      <Project>{46BD1788-1D0D-4CEA-AE35-4F0434999794}</Project>
+      <Name>DMDNetLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CommonProjects\DMDSMSService\DMDSMSService.csproj">
+      <Project>{c54743c8-bec3-4bac-b363-86af7bc3ddf2}</Project>
+      <Name>DMDSMSService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MiniDOMBase\MiniDOMBase.csproj">
+      <Project>{6431c469-2ba1-020d-24cd-a12fcd7943ab}</Project>
+      <Name>MiniDOMBase</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

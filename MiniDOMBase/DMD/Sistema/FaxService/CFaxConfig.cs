@@ -1,0 +1,211 @@
+﻿using DMD;
+using DMD.XML;
+using System;
+
+namespace minidom 
+{
+    public partial class Sistema
+    {
+
+        /// <summary>
+        /// Configurazione del modulo fax
+        /// </summary>
+        [Serializable]
+        public class CFaxConfig 
+            : DMD.XML.DMDBaseXMLObject
+        {
+            private string m_DefaultSenderName;
+            private string m_DefaultSenderNumber;
+            private string m_DefaultDriverName;
+
+            /// <summary>
+            /// Costruttore
+            /// </summary>
+            public CFaxConfig()
+            {
+                m_DefaultDriverName = "";
+                m_DefaultSenderName = "";
+                m_DefaultSenderNumber = "";
+            }
+
+            /// <summary>
+            /// Restituisce o imposta il nome del driver predefinito
+            /// </summary>
+            /// <value></value>
+            /// <returns></returns>
+            /// <remarks></remarks>
+            public string DefaultDriverName
+            {
+                get
+                {
+                    return m_DefaultDriverName;
+                }
+
+                set
+                {
+                    value = DMD.Strings.Trim(value);
+                    string oldValue = m_DefaultDriverName;
+                    if ((oldValue ?? "") == (value ?? ""))
+                        return;
+                    m_DefaultDriverName = value;
+                    DoChanged("DefaultDriverName", value, oldValue);
+                }
+            }
+
+            /// <summary>
+            /// Restituisce o imposta il nome del mittente predefinito
+            /// </summary>
+            /// <value></value>
+            /// <returns></returns>
+            /// <remarks></remarks>
+            public string DefaultSenderName
+            {
+                get
+                {
+                    return m_DefaultSenderName;
+                }
+
+                set
+                {
+                    value = DMD.Strings.Trim(value);
+                    string oldValue = m_DefaultSenderName;
+                    if ((oldValue ?? "") == (value ?? ""))
+                        return;
+                    m_DefaultSenderName = value;
+                    DoChanged("DefaultSenderName", value, oldValue);
+                }
+            }
+
+            /// <summary>
+            /// Restituisce o imposta il numero del mittente predefinito
+            /// </summary>
+            /// <value></value>
+            /// <returns></returns>
+            /// <remarks></remarks>
+            public string DefaultSenderNumbmer
+            {
+                get
+                {
+                    return m_DefaultSenderNumber;
+                }
+
+                set
+                {
+                    value = DMD.Strings.Trim(value);
+                    string oldValue = m_DefaultSenderNumber;
+                    if ((oldValue ?? "") == (value ?? ""))
+                        return;
+                    m_DefaultSenderNumber = value;
+                    DoChanged("DefaultSenderNumber", value, oldValue);
+                }
+            }
+
+           
+
+            //protected override bool LoadFromRecordset(Databases.DBReader reader)
+            //{
+            //    m_DefaultDriverName = reader.Read("DefaultDriverName", this. m_DefaultDriverName);
+            //    m_DefaultSenderName = reader.Read("DefaultSenderName", this.m_DefaultSenderName);
+            //    m_DefaultSenderNumber = reader.Read("DefaultSenderNumber", this.m_DefaultSenderNumber);
+            //    return base.LoadFromRecordset(reader);
+            //}
+
+            //protected override bool SaveToRecordset(Databases.DBWriter writer)
+            //{
+            //    writer.Write("DefaultDriverName", m_DefaultDriverName);
+            //    writer.Write("DefaultSenderName", m_DefaultSenderName);
+            //    writer.Write("DefaultSenderNumber", m_DefaultSenderNumber);
+            //    return base.SaveToRecordset(writer);
+            //}
+
+            /// <summary>
+            /// Deserializzazione xml
+            /// </summary>
+            /// <param name="fieldName"></param>
+            /// <param name="fieldValue"></param>
+            protected override void SetFieldInternal(string fieldName, object fieldValue)
+            {
+                switch (fieldName ?? "")
+                {
+                    case "DefaultDriverName":
+                        {
+                            m_DefaultDriverName = DMD.XML.Utils.Serializer.DeserializeString(fieldValue);
+                            break;
+                        }
+
+                    case "DefaultSenderName":
+                        {
+                            m_DefaultSenderName = DMD.XML.Utils.Serializer.DeserializeString(fieldValue);
+                            break;
+                        }
+
+                    case "DefaultSenderNumber":
+                        {
+                            m_DefaultSenderNumber = DMD.XML.Utils.Serializer.DeserializeString(fieldValue);
+                            break;
+                        }
+
+                    default:
+                        {
+                            base.SetFieldInternal(fieldName, fieldValue);
+                            break;
+                        }
+                }
+            }
+
+            /// <summary>
+            /// Serializzazione xml
+            /// </summary>
+            /// <param name="writer"></param>
+            protected override void XMLSerialize(XMLWriter writer)
+            {
+                writer.WriteAttribute("DefaultDriverName", m_DefaultDriverName);
+                writer.WriteAttribute("DefaultSenderName", m_DefaultSenderName);
+                writer.WriteAttribute("DefaultSenderNumber", m_DefaultSenderNumber);
+                base.XMLSerialize(writer);
+            }
+
+            /// <summary>
+            /// Restituisce una stringa che rappresenta l'oggetto
+            /// </summary>
+            /// <returns></returns>
+            public override string ToString()
+            {
+                return this.DefaultDriverName;
+            }
+
+            /// <summary>
+            /// Restituisce il codice hash dell'oggetto
+            /// </summary>
+            /// <returns></returns>
+            public override int GetHashCode()
+            {
+                return HashCalculator.Calculate(this.m_DefaultDriverName);
+            }
+
+            /// <summary>
+            /// Restituisce true se i due oggetti sono uguali
+            /// </summary>
+            /// <param name="obj"></param>
+            /// <returns></returns>
+            public sealed override bool Equals(object obj)
+            {
+                return (obj is CFaxConfig) && this.Equals((CFaxConfig)obj);
+            }
+
+            /// <summary>
+            /// Restituisce true se i due oggetti sono uguali
+            /// </summary>
+            /// <param name="obj"></param>
+            /// <returns></returns>
+            public virtual bool Equals(CFaxConfig obj)
+            {
+                return base.Equals(obj)
+                    && DMD.Strings.EQ(this.m_DefaultSenderName, obj.m_DefaultSenderName)
+                    && DMD.Strings.EQ(this.m_DefaultSenderNumber, obj.m_DefaultSenderNumber)
+                    && DMD.Strings.EQ(this.m_DefaultDriverName, obj.m_DefaultDriverName)
+                    ;            
+            }
+        }
+    }
+}

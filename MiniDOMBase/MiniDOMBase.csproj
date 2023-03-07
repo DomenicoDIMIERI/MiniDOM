@@ -1,0 +1,591 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6431C469-2BA1-020D-24CD-A12FCD7943AB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>minidom</RootNamespace>
+    <AssemblyName>MiniDOMBase</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <DefaultItemExcludes>$(DefaultItemExcludes);$(ProjectDir)**\*.vb</DefaultItemExcludes>
+    <LangVersion>latest</LangVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>bin\Debug\MiniDOMBase.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>bin\Release\MiniDOMBase.xml</DocumentationFile>
+    <NoWarn>41999,42016</NoWarn>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DocumentationFile>bin\x86\Debug\MiniDOMBase.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DocumentationFile>bin\x86\Release\MiniDOMBase.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>41999,42016</NoWarn>
+    <DebugType>None</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DocumentationFile>bin\x64\Debug\MiniDOMBase.xml</DocumentationFile>
+    <NoWarn>41999,42016</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DocumentationFile>bin\x64\Release\MiniDOMBase.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>41999,42016</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DMD\Anagrafica\Contatto\Contatti.cs" />
+    <Compile Include="DMD\Anagrafica\Banche\ContiCorrente\Intestatari\Intestatari.cs" />
+    <Compile Include="DMD\Anagrafica\Impiegati\Impieghi.cs" />
+    <Compile Include="DMD\Anagrafica\MergePersonaRecord\MergeModuleGruppoPersona.cs" />
+    <Compile Include="DMD\Anagrafica\Persone\FindHandlers\CRegisteredFindPersonaHandlers.cs" />
+    <Compile Include="DMD\Anagrafica\Persone\PersoneFisiche\PersoneFisiche.cs" />
+    <Compile Include="DMD\Anagrafica\Uffici\UtentiXUfficio\CUtentiXUfficioRepository.cs" />
+    <Compile Include="DMD\Luoghi\Continenti\CContinente.cs" />
+    <Compile Include="DMD\Luoghi\Continenti\CContinentiCursor.cs" />
+    <Compile Include="DMD\Luoghi\Continenti\Continenti.cs" />
+    <Compile Include="DMD\Sistema\Calendar\RegisteredProviders\CRegisteredCalendarProviderRepository.cs" />
+    <Compile Include="DMD\Sistema\Calendar\RegisteredProviders\CRegisteredCalendarProviderCursor.cs" />
+    <Compile Include="DMD\Sistema\Calendar\Stats\CCalendarStats.cs" />
+    <Compile Include="DMD\Sistema\Attributes\Attributes.cs" />
+    <Compile Include="DMD\Sistema\Attributes\CObjectAttribute.cs" />
+    <Compile Include="DMD\Sistema\Attributes\CObjectAttributeCursor.cs" />
+    <Compile Include="DMD\Databases\DBObjectBase.cs" />
+    <Compile Include="DMD\Databases\DBObjectCursorPOOf.cs" />
+    <Compile Include="DMD\Databases\DBObjectOwned.cs" />
+    <Compile Include="DMD\Databases\DBObjectCursor.cs" />
+    <Compile Include="DMD\Databases\DBObjectCursorBase.cs" />
+    <Compile Include="DMD\Databases\DBObjectCursorBaseOf.cs" />
+    <Compile Include="DMD\Databases\DBObjectCursorOf.cs" />
+    <Compile Include="DMD\Databases\DBObjectCursorPO.cs" />
+    <Compile Include="DMD\Databases\DBObjectPO.cs" />
+    <Compile Include="DMD\Sistema\Groups\GroupAllowNegate\GroupAllowNegateCollection.cs" />
+    <Compile Include="DMD\Sistema\Repositories\CGeneralClassOtT.cs" />
+    <Compile Include="DMD\Sistema\EMailSys\Accounts\CEmailAccountCursor.cs" />
+    <Compile Include="DMD\Sistema\Events\Exceptions\EventHandlerException.cs" />
+    <Compile Include="DMD\Sistema\Events\Args\EventDescription.cs" />
+    <Compile Include="DMD\Sistema\FaxService\CFaxConfig.cs" />
+    <Compile Include="DMD\Sistema\FaxService\FaxService.cs" />
+    <Compile Include="DMD\Sistema\FaxService\Lines\RegisteredFaxLine.cs" />
+    <Compile Include="DMD\Sistema\FaxService\Lines\RegisteredFaxLineCursor.cs" />
+    <Compile Include="DMD\Sistema\FaxService\Lines\RegisteredFaxLines.cs" />
+    <Compile Include="DMD\Sistema\Groups\GroupAuthorizations\CGroupAuthorizationsRepository.cs" />
+    <Compile Include="DMD\Sistema\Groups\KnownGroups.cs" />
+    <Compile Include="DMD\Sistema\IndexingServices\IIndexable.cs" />
+    <Compile Include="DMD\Sistema\IndexingServices\Results\CResult.cs" />
+    <Compile Include="DMD\Sistema\IndexingServices\WordInfo\WordInfo.cs" />
+    <Compile Include="DMD\Sistema\IndexingServices\Words\CachedIndexCursor.cs" />
+    <Compile Include="DMD\Sistema\IndexingServices\Words\CachedIndex.cs" />
+    <Compile Include="DMD\Sistema\IndexingServices\Words\CachedWordCursor.cs" />
+    <Compile Include="DMD\Sistema\IndexingServices\Words\CachedWord.cs" />
+    <Compile Include="DMD\Sistema\LoginHistory\LoginHistories.cs" />
+    <Compile Include="DMD\Sistema\Modules\ExportableColumns\ExportableColumnInfo.cs" />
+    <Compile Include="DMD\Sistema\Modules\ModulesXGroup\CModuleXGroupRepository.cs" />
+    <Compile Include="DMD\Sistema\Modules\ModulesXUser\CModuleXUsersRepository.cs" />
+    <Compile Include="DMD\Sistema\Notifiche\AzioneEseguita\AzioniEseguite.cs" />
+    <Compile Include="DMD\Sistema\Procedure\Workers\CProcedura_Workers.cs" />
+    <Compile Include="DMD\Sistema\PropertyPages\GroupAllowNegate\PropPageGroupAllowNegateCursor.cs" />
+    <Compile Include="DMD\Sistema\PropertyPages\UserAllowNegate\PropPageUserAllowNegateRepository.cs" />
+    <Compile Include="DMD\Sistema\RegisteredDevices\CRegisteredDevicesCursor.cs" />
+    <Compile Include="DMD\Sistema\RegisteredDevices\CRegisteredDevice.cs" />
+    <Compile Include="DMD\Sistema\RegisteredDevices\CRegisteredDevicesRepository.cs" />
+    <Compile Include="DMD\Sistema\Users\UserAllowNegate\UserAllowNegateCollection.cs" />
+    <Compile Include="DMD\Sistema\Users\UserAuthorizations\CUserAuthorizationsRepository.cs" />
+    <Compile Include="DMD\Sistema\Users\UsersXGroup\UsersXGroupsRepository.cs" />
+    <Compile Include="My Project\MyNamespace.Static.1.Designer.cs" />
+    <Compile Include="DMD\Anagrafica\Anagrafica.cs" />
+    <Compile Include="DMD\Anagrafica\Persone\Aziende\Aziende.cs" />
+    <Compile Include="DMD\Anagrafica\Persone\Aziende\CAzienda.cs" />
+    <Compile Include="DMD\Anagrafica\Persone\Aziende\CAziendaPrincipale.cs" />
+    <Compile Include="DMD\Anagrafica\Persone\Aziende\CAziendeCursor.cs" />
+    <Compile Include="DMD\Anagrafica\Persone\Aziende\CAziendaUffici.cs" />
+    <Compile Include="DMD\Anagrafica\Banche\Banche.cs" />
+    <Compile Include="DMD\Anagrafica\Banche\CBanca.cs" />
+    <Compile Include="DMD\Anagrafica\Banche\CBancheCursor.cs" />
+    <Compile Include="DMD\Anagrafica\Banche\BBAN\CBBAN.cs" />
+    <Compile Include="DMD\Anagrafica\Banche\BBAN\CBBANIT.cs" />
+    <Compile Include="DMD\Anagrafica\Fonti\Canali\Canali.cs" />
+    <Compile Include="DMD\Anagrafica\Fonti\Canali\CCanale.cs" />
+    <Compile Include="DMD\Anagrafica\Fonti\Canali\CCanaleCursor.cs" />
+    <Compile Include="DMD\Anagrafica\CategoriaAzienda\CCategoriaAzienda.cs" />
+    <Compile Include="DMD\Anagrafica\CategoriaAzienda\CCategorieAziendaCursor.cs" />
+    <Compile Include="DMD\Anagrafica\CategoriaAzienda\CategorieAzienda.cs" />
+    <Compile Include="DMD\Anagrafica\CodiceFiscale\CodiceFiscale.cs" />
+    <Compile Include="DMD\Anagrafica\ConsensiInformati\ConsensoInformato.cs" />
+    <Compile Include="DMD\Anagrafica\ConsensiInformati\ConsensoInformatoCollection.cs" />
+    <Compile Include="DMD\Anagrafica\ConsensiInformati\ConsensoInformatoCursor.cs" />
+    <Compile Include="DMD\Anagrafica\ConsensiInformati\ConsensiInformati.cs" />
+    <None Include="DMD\Anagrafica\ContattiEsterni\CContattoEsterno.cs" />
+    <Compile Include="DMD\Anagrafica\Contatto\CContatto.cs" />
+    <Compile Include="DMD\Anagrafica\Contatto\CContattiPerPersonaCollection.cs" />
+    <Compile Include="DMD\Anagrafica\Impiegati\CImpiegatiCursor.cs" />
+    <Compile Include="DMD\Anagrafica\Persone\PersoneFisiche\Impieghi\CImpieghi.cs" />
+    <Compile Include="DMD\Anagrafica\Contatto\CContattoCursor.cs" />
+    <None Include="DMD\Anagrafica\Tasks\AzioniTaskLavorazione\AzioniTasksDiLavorazione.cs" />
+    <None Include="DMD\Anagrafica\Tasks\AzioniTaskLavorazione\AzioneTaskLavorazione.cs" />
+    <None Include="DMD\Anagrafica\Tasks\AzioniTaskLavorazione\AzioneTaskLavorazioneCursor.cs" />
+    <Compile Include="DMD\Anagrafica\Banche\ContiCorrente\ContiCorrente.cs" />
+    <Compile Include="DMD\Anagrafica\Banche\ContiCorrente\ContoCorrente.cs" />
+    <Compile Include="DMD\Anagrafica\Banche\ContiCorrente\ContoCorrenteCursor.cs" />
+    <Compile Include="DMD\Anagrafica\Banche\ContiCorrente\Intestatari\CIntestatariContoCorrente.cs" />
+    <Compile Include="DMD\Anagrafica\Banche\ContiCorrente\Intestatari\IntestatarioContoCorrenteCursor.cs" />
+    <Compile Include="DMD\Anagrafica\Banche\ContiCorrente\Intestatari\IntestatarioContoCorrente.cs" />
+    <Compile Include="DMD\Anagrafica\Banche\ContiOnline\ContoOnline.cs" />
+    <Compile Include="DMD\Anagrafica\Banche\ContiOnline\ContoOnlineCursor.cs" />
+    <Compile Include="DMD\Anagrafica\Banche\ContiOnline\ContiOnline.cs" />
+    <Compile Include="DMD\Anagrafica\Fonti\Stats\CFonteExternalStats.cs" />
+    <Compile Include="DMD\Anagrafica\MotiviContatto\MotiviContatto.cs" />
+    <Compile Include="DMD\Anagrafica\MotiviContatto\MotiviContattoCursor.cs" />
+    <Compile Include="DMD\Anagrafica\MotiviContatto\MotivoContatto.cs" />
+    <Compile Include="DMD\Anagrafica\MotiviAppuntamento\MotivoAppuntamento.cs" />
+    <Compile Include="DMD\Anagrafica\MotiviAppuntamento\MotiviAppuntamentoCursor.cs" />
+    <Compile Include="DMD\Anagrafica\MotiviAppuntamento\MotiviAppuntamento.cs" />
+    <Compile Include="DMD\Anagrafica\ListeRicontatto\Importers\XLSImporter.cs" />
+    <Compile Include="DMD\Anagrafica\ListeRicontatto\Importers\XLSImporterColumn.cs" />
+    <Compile Include="DMD\Anagrafica\ListeRicontatto\Importers\XLSImporterResult.cs" />
+    <Compile Include="DMD\Anagrafica\ListeRicontatto\Importers\XLSImporterTable.cs" />
+    <Compile Include="DMD\Anagrafica\Manutenzioni\Voci\VociManutenzione.cs" />
+    <Compile Include="DMD\Anagrafica\Manutenzioni\Voci\VociManutenzioneCursor.cs" />
+    <Compile Include="DMD\Anagrafica\Manutenzioni\Voci\VoceManutenzione.cs" />
+    <Compile Include="DMD\Anagrafica\Manutenzioni\Voci\VociManutenzioneCollection.cs" />
+    <Compile Include="DMD\Anagrafica\MergePersonaRecord\CMergePersonaCursor.cs" />
+    <Compile Include="DMD\Anagrafica\MergePersonaRecord\MergePersone.cs" />
+    <Compile Include="DMD\Anagrafica\MergePersonaRecord\CMergePersona.cs" />
+    <Compile Include="DMD\Anagrafica\MergePersonaRecord\MergePersonaRecord.cs" />
+    <Compile Include="DMD\Anagrafica\MetodiDiPagamento\IMetodiDiPagamento.cs" />
+    <Compile Include="DMD\Anagrafica\CarteDiCredito\CarteDiCredito.cs" />
+    <Compile Include="DMD\Anagrafica\CarteDiCredito\CartaDiCredito.cs" />
+    <Compile Include="DMD\Anagrafica\CarteDiCredito\CartaDiCreditoCursor.cs" />
+    <Compile Include="DMD\Anagrafica\Persone\FindHandlers\CRegisteredFindHandlerCursor.cs" />
+    <Compile Include="DMD\Anagrafica\Persone\FindHandlers\CRegisteredFindHandler.cs" />
+    <Compile Include="DMD\Anagrafica\Persone\FindHandlers\FindPersonaHandler.cs" />
+    <Compile Include="DMD\Anagrafica\Persone\FindHandlers\CRMFindParams.cs" />
+    <Compile Include="DMD\Anagrafica\ListeRicontatto\Items\ListaRicontattoItemCursor.cs" />
+    <Compile Include="DMD\Anagrafica\ListeRicontatto\Items\ListaRicontattoItem.cs" />
+    <Compile Include="DMD\Anagrafica\ListeRicontatto\Items\ListeRicontattoItems.cs" />
+    <Compile Include="DMD\Anagrafica\Manutenzioni\CManutenzione.cs" />
+    <Compile Include="DMD\Anagrafica\Manutenzioni\CManutenzioniCursor.cs" />
+    <Compile Include="DMD\Anagrafica\Manutenzioni\Manutenzioni.cs" />
+    <Compile Include="DMD\Anagrafica\Postazioni\Contatori\ValoriRegistri.cs" />
+    <Compile Include="DMD\Anagrafica\Postazioni\Contatori\ValoreRegistroCursor.cs" />
+    <Compile Include="DMD\Anagrafica\Postazioni\Contatori\ValoreRegistroContatore.cs" />
+    <Compile Include="DMD\Anagrafica\Postazioni\RegistriContatori\RegistroContatore.cs" />
+    <Compile Include="DMD\Anagrafica\Tasks\Handlers\BaseTaskHandler.cs" />
+    <Compile Include="DMD\Anagrafica\Tasks\Handlers\ITaskHandler.cs" />
+    <Compile Include="DMD\Anagrafica\Tasks\RegoleTaskLavorazione\RegoleTaskLavorazionePerStato.cs" />
+    <Compile Include="DMD\Anagrafica\Tasks\RegoleTaskLavorazione\RegolaTaskLavorazione.cs" />
+    <Compile Include="DMD\Anagrafica\Tasks\RegoleTaskLavorazione\RegolaTaskLavorazioneCursor.cs" />
+    <Compile Include="DMD\Anagrafica\Tasks\RegoleTaskLavorazione\RegoleTasksDiLavorazione.cs" />
+    <Compile Include="DMD\Anagrafica\Tasks\StatiTaskLavorazione\StatoTaskLavorazione.cs" />
+    <Compile Include="DMD\Anagrafica\Tasks\StatiTaskLavorazione\StatoTaskLavorazioneCursor.cs" />
+    <Compile Include="DMD\Anagrafica\Tasks\StatiTaskLavorazione\StatiTasksDiLavorazione.cs" />
+    <Compile Include="DMD\Anagrafica\Tasks\TaskLavorazione.cs" />
+    <Compile Include="DMD\Anagrafica\Tasks\TaskLavorazioneCursor.cs" />
+    <Compile Include="DMD\Anagrafica\Tasks\TasksDiLavorazione.cs" />
+    <Compile Include="DMD\Anagrafica\Persone\Comparers\CPersonaComparer.cs" />
+    <Compile Include="DMD\Anagrafica\Persone\Info\CPersonaInfo.cs" />
+    <Compile Include="DMD\Anagrafica\Persone\CPersona.cs" />
+    <Compile Include="DMD\Anagrafica\Persone\CPersonaCursor.cs" />
+    <Compile Include="DMD\Anagrafica\Distributori\CDistributore.cs" />
+    <Compile Include="DMD\Anagrafica\Distributori\CDistributoriCursor.cs" />
+    <Compile Include="DMD\Anagrafica\Distributori\Providers\DistributoriFonteProvider.cs" />
+    <Compile Include="DMD\Anagrafica\Distributori\Distributori.cs" />
+    <Compile Include="DMD\Anagrafica\Persone\Events\TransferPersonaEventArgs.cs" />
+    <Compile Include="DMD\Anagrafica\Persone\Events\MergePersonaEventArgs.cs" />
+    <Compile Include="DMD\Anagrafica\Persone\Events\PersonaEventArgs.cs" />
+    <Compile Include="DMD\Anagrafica\Fonti\CFonte.cs" />
+    <Compile Include="DMD\Anagrafica\Fonti\CFontiCursor.cs" />
+    <Compile Include="DMD\Anagrafica\Fonti\Fonti.cs" />
+    <Compile Include="DMD\Anagrafica\Fonti\Providers\FontiDefaultProvider.cs" />
+    <Compile Include="DMD\Anagrafica\Fonti\IFonte.cs" />
+    <Compile Include="DMD\Anagrafica\Fonti\Providers\IFonteProvider.cs" />
+    <Compile Include="DMD\Anagrafica\FormeGiuridicheAzienda\FormeGiuridicheAzienda.cs" />
+    <Compile Include="DMD\Anagrafica\FormeGiuridicheAzienda\CFormeGiuridicheAziendaCursor.cs" />
+    <Compile Include="DMD\Anagrafica\FormeGiuridicheAzienda\CFormaGiuridicaAzienda.cs" />
+    <Compile Include="DMD\Anagrafica\Banche\IBAN\CIBAN.cs" />
+    <Compile Include="DMD\Anagrafica\Impiegati\CImpiegati.cs" />
+    <Compile Include="DMD\Anagrafica\Impiegati\CImpiegato.cs" />
+    <Compile Include="DMD\Anagrafica\ListeRicontatto\CListaRicontatti.cs" />
+    <Compile Include="DMD\Anagrafica\ListeRicontatto\CListaRicontattiCursor.cs" />
+    <Compile Include="DMD\Anagrafica\ListeRicontatto\ListeRicontatto.cs" />
+    <Compile Include="DMD\Anagrafica\Persone\Persone.cs" />
+    <Compile Include="DMD\Anagrafica\Persone\PersoneFisiche\CPersonaFisica.cs" />
+    <Compile Include="DMD\Anagrafica\Persone\PersoneFisiche\CPersonaFisicaCursor.cs" />
+    <Compile Include="DMD\Anagrafica\RelazioniParentali\CRelazioneParentale.cs" />
+    <Compile Include="DMD\Anagrafica\RelazioniParentali\CRelazioneParentaleCursor.cs" />
+    <Compile Include="DMD\Anagrafica\RelazioniParentali\RelazioniParentali.cs" />
+    <Compile Include="DMD\Anagrafica\Ricontatti\Providers\CRMFilter.cs" />
+    <Compile Include="DMD\Anagrafica\Ricontatti\Providers\CRicontattiCalProvider.cs" />
+    <Compile Include="DMD\Anagrafica\Ricontatti\CRicontattiCursor.cs" />
+    <Compile Include="DMD\Anagrafica\Ricontatti\CRicontatto.cs" />
+    <Compile Include="DMD\Anagrafica\Ricontatti\Ricontatti.cs" />
+    <Compile Include="DMD\Anagrafica\TipiRapporto\CTipoRapporto.cs" />
+    <Compile Include="DMD\Anagrafica\TipiRapporto\CTipoRapportoCursor.cs" />
+    <Compile Include="DMD\Anagrafica\TipiRapporto\TipiRapporto.cs" />
+    <None Include="app.config" />
+    <Compile Include="DMD\Anagrafica\TipologieAziende\TipologieAzienda.cs" />
+    <Compile Include="DMD\Anagrafica\TipologieAziende\CTipologiaAziendaCursor.cs" />
+    <Compile Include="DMD\Anagrafica\TipologieAziende\CTipologiaAzienda.cs" />
+    <Compile Include="DMD\Anagrafica\Postazioni\CPostazioniCursor.cs" />
+    <Compile Include="DMD\Anagrafica\Postazioni\CPostazione.cs" />
+    <Compile Include="DMD\Anagrafica\Postazioni\UtentiXPostazione\CUtenteXPostazione.cs" />
+    <Compile Include="DMD\Anagrafica\Postazioni\UtentiXPostazione\CUtentiXPostazioneCollection.cs" />
+    <Compile Include="DMD\Anagrafica\Postazioni\Postazioni.cs" />
+    <Compile Include="DMD\Anagrafica\Uffici\UtentiXUfficio\CUtentiXUfficioCollection.cs" />
+    <Compile Include="DMD\Anagrafica\Uffici\UtentiXUfficio\CUtentiXUfficioCursor.cs" />
+    <Compile Include="DMD\Anagrafica\Uffici\UtentiXUfficio\CUtenteXUfficio.cs" />
+    <Compile Include="DMD\Anagrafica\Uffici\CUfficiCursor.cs" />
+    <Compile Include="DMD\Anagrafica\Uffici\CUfficio.cs" />
+    <Compile Include="DMD\Anagrafica\Uffici\Uffici.cs" />
+    <Compile Include="DMD\Sistema\Calendar\Stats\CStatisticheOperazione.cs" />
+    <Compile Include="DMD\Sistema\Calendar\Scheduling\ISchedulable.cs" />
+    <Compile Include="DMD\Sistema\Anomalie\Anomalia.cs" />
+    <Compile Include="DMD\Sistema\Anomalie\OggettoAnomalo.cs" />
+    <Compile Include="DMD\Sistema\Groups\GroupAllowNegate\GroupAllowNegateCursorOf.cs" />
+    <Compile Include="DMD\Sistema\Groups\GroupAllowNegate\GroupAllowNegateOf.cs" />
+    <Compile Include="DMD\Sistema\Users\UserAllowNegate\UserAllowNegateCursorOf.cs" />
+    <Compile Include="DMD\Sistema\Users\UserAllowNegate\UserAllowNegateOf.cs" />
+    <Compile Include="DMD\Sistema\Attachments\Childs\CAttachmentChilds.cs" />
+    <Compile Include="DMD\Sistema\Backup\Catalog\CBackupItem.cs" />
+    <Compile Include="DMD\Sistema\Backup\Catalog\CBackupItems.cs" />
+    <Compile Include="DMD\Sistema\Backup\CBackup.cs" />
+    <Compile Include="DMD\Sistema\Backup\Config\Configuration.cs" />
+    <Compile Include="DMD\Sistema\Backup\CBackupCursor.cs" />
+    <Compile Include="DMD\Sistema\Calendar\Comparer\ActivePersonComparer.cs" />
+    <Compile Include="DMD\Sistema\Calendar\Comparer\ActivePersonDateComparer.cs" />
+    <Compile Include="DMD\Sistema\Calendar\Providers\BaseCalendarActivitiesProvider.cs" />
+    <Compile Include="DMD\Sistema\Calendar\ActivePerson\CActivePerson.cs" />
+    <Compile Include="DMD\Sistema\Calendar\Calendario.cs" />
+    <Compile Include="DMD\Sistema\Calendar\Providers\CCalendarActivitiesProvider.cs" />
+    <Compile Include="DMD\Sistema\Calendar\Activities\CCalendarActivity.cs" />
+    <Compile Include="DMD\Sistema\Calendar\Activities\CCalendarActivityCursor.cs" />
+    <Compile Include="DMD\Sistema\Calendar\Activities\Info\CCalendarActivityInfo.cs" />
+    <Compile Include="DMD\Sistema\Calendar\Providers\CCalendarItemsComparer.cs" />
+    <Compile Include="DMD\Sistema\Calendar\RegisteredProviders\CRegisteredCalendarProvider.cs" />
+    <Compile Include="DMD\Sistema\Calendar\Activities\ICalendarActivity.cs" />
+    <Compile Include="DMD\Sistema\Calendar\Providers\Iinterface\ICalendarProvider.cs" />
+    <Compile Include="DMD\Sistema\Calendar\Scheduling\CalendarSchedule.cs" />
+    <Compile Include="DMD\Sistema\Calendar\Scheduling\CalendarScheduleCursor.cs" />
+    <Compile Include="DMD\Sistema\Calendar\Scheduling\MultipleScheduleCollection.cs" />
+    <Compile Include="DMD\Sistema\Calendar\Scheduling\ScheduledTasks.cs" />
+    <Compile Include="DMD\Sistema\Modules\ItemAllowNegate\ItemAllowNegate.cs" />
+    <Compile Include="DMD\Sistema\Users\Uffici\CUserUffici.cs" />
+    <Compile Include="DMD\Luoghi\Comuni\IntervalliCAP\IntervalliCAP.cs" />
+    <Compile Include="DMD\Sistema\Repositories\CGeneralClass.cs" />
+    <Compile Include="DMD\Sistema\Procedure\Handlers\BaseProceduraHandler.cs" />
+    <Compile Include="DMD\Sistema\Procedure\Handlers\IProceduraHandler.cs" />
+    <Compile Include="DMD\Sistema\Procedure\CProcedureCursor.cs" />
+    <Compile Include="DMD\Sistema\Procedure\CProcedureClass.cs" />
+    <Compile Include="DMD\Sistema\Procedure\CProcedura.cs" />
+    <Compile Include="DMD\Sistema\PropertyPages\GroupAllowNegate\PropPageGroupAllowNegate.cs" />
+    <Compile Include="DMD\Sistema\PropertyPages\GroupAllowNegate\PropPageGroupAllowNegateCollection.cs" />
+    <Compile Include="DMD\Sistema\PropertyPages\GroupAllowNegate\PropPageGroupAllowNegateRepository.cs" />
+    <Compile Include="DMD\Sistema\PropertyPages\UserAllowNegate\PropPageUserAllowNegate.cs" />
+    <Compile Include="DMD\Sistema\PropertyPages\UserAllowNegate\PropPageUserAllowNegateCollection.cs" />
+    <Compile Include="DMD\Sistema\PropertyPages\UserAllowNegate\PropPageUserAllowNegateCursor.cs" />
+    <Compile Include="DMD\Sistema\Sincronizzazioni\SyncItem.cs" />
+    <Compile Include="DMD\Sistema\Sincronizzazioni\SyncItemsCursor.cs" />
+    <Compile Include="DMD\Sistema\Sincronizzazioni\SyncItemsModule.cs" />
+    <Compile Include="DMD\Sistema\TelephoneService\CTelephoneConfig.cs" />
+    <Compile Include="DMD\Sistema\TelephoneService\CTelephoneService.cs" />
+    <Compile Include="DMD\Sistema\EMailSys\Accounts\CEmailAccount.cs" />
+    <Compile Include="DMD\Sistema\EMailSys\Accounts\CEmailAccounts.cs" />
+    <Compile Include="DMD\Sistema\Security\CSecurityTokenCursor.cs" />
+    <Compile Include="DMD\Sistema\Security\CSecurityToken.cs" />
+    <Compile Include="DMD\Sistema\Modules\Handlers\IModuleHandler.cs" />
+    <Compile Include="DMD\Sistema\IndexingServices\IndexingService.cs" />
+    <Compile Include="DMD\Sistema\Groups\Members\CGroupMembersCollection.cs" />
+    <Compile Include="DMD\Sistema\Groups\CGroupCursor.cs" />
+    <Compile Include="DMD\Sistema\Notifiche\AzioneEseguita\AzioneEseguitaCursor.cs" />
+    <Compile Include="DMD\Sistema\Notifiche\AzioniEseguibili\EliminaNotificaAction.cs" />
+    <Compile Include="DMD\Sistema\Security\Security.cs" />
+    <Compile Include="DMD\Sistema\SMSService\CSMSConfig.cs" />
+    <Compile Include="DMD\Sistema\SMSService\SMSService.cs" />
+    <Compile Include="DMD\Sistema\Annotazioni\CAnnotazione.cs" />
+    <Compile Include="DMD\Sistema\Annotazioni\CAnnotazioni.cs" />
+    <Compile Include="DMD\Sistema\Annotazioni\CAnnotazioniCursor.cs" />
+    <Compile Include="DMD\Sistema\Annotazioni\CAnnotazioniRepository.cs" />
+    <Compile Include="DMD\Sistema\Attachments\CAttachment.cs" />
+    <Compile Include="DMD\Sistema\Attachments\CAttachmentsCursor.cs" />
+    <Compile Include="DMD\Sistema\Attachments\CAttachmentsCollection.cs" />
+    <Compile Include="DMD\Exceptions\FontFormatException.cs" />
+    <Compile Include="DMD\Sistema\FileSystem\FindFolderCursor.cs" />
+    <Compile Include="DMD\Sistema\FileSystem\FindFileCursor.cs" />
+    <Compile Include="DMD\Formats\Formats.cs" />
+    <Compile Include="DMD\Luoghi\Comuni\CComune.cs" />
+    <Compile Include="DMD\Luoghi\Comuni\CComuniCursor.cs" />
+    <Compile Include="DMD\Luoghi\Comuni\Comuni.cs" />
+    <Compile Include="DMD\Luoghi\Nazioni\CNazione.cs" />
+    <Compile Include="DMD\Luoghi\Nazioni\CNazioniCursor.cs" />
+    <Compile Include="DMD\Luoghi\Indirizzi\CIndirizzo.cs" />
+    <Compile Include="DMD\Luoghi\Indirizzi\CIndirizziCursor.cs" />
+    <Compile Include="DMD\Anagrafica\Persone\Indirizzi\CIndirizziCollection.cs" />
+    <Compile Include="DMD\Luoghi\Comuni\IntervalliCAP\CIntervalloCAP.cs" />
+    <Compile Include="DMD\Luoghi\Comuni\IntervalliCAP\CIntervalloCAPCursor.cs" />
+    <Compile Include="DMD\Luoghi\Comuni\IntervalliCAP\CIntervalliCAP.cs" />
+    <Compile Include="DMD\Luoghi\Indirizzi\Indirizzi.cs" />
+    <Compile Include="DMD\Luoghi\Nazioni\Nazioni.cs" />
+    <Compile Include="DMD\Luoghi\Regioni\Regioni.cs" />
+    <Compile Include="DMD\Luoghi\Regioni\CRegioniCursor.cs" />
+    <Compile Include="DMD\Luoghi\Regioni\CRegione.cs" />
+    <Compile Include="DMD\Luoghi\Province\Province.cs" />
+    <Compile Include="DMD\Luoghi\Province\CProvinceCursor.cs" />
+    <Compile Include="DMD\Luoghi\Province\CProvincia.cs" />
+    <Compile Include="DMD\Luoghi\LuogoCursorISTAT.cs" />
+    <Compile Include="DMD\Luoghi\LuogoISTAT.cs" />
+    <Compile Include="DMD\Luoghi\LuogoCursor.cs" />
+    <Compile Include="DMD\Luoghi\Luogo.cs" />
+    <Compile Include="DMD\Sistema\Attachments\CAttachmentsClass.cs" />
+    <Compile Include="DMD\Sistema\Notifiche\AzioniRegistrate\AzioneRegistrataCursor.cs" />
+    <Compile Include="DMD\Sistema\Notifiche\AzioniRegistrate\AzioniRegistrate.cs" />
+    <Compile Include="DMD\Application\IApplicationContext.cs" />
+    <Compile Include="DMD\Sistema\LoginHistory\CLoginHistory.cs" />
+    <Compile Include="DMD\Sistema\LoginHistory\CLoginHistoryCursor.cs" />
+    <Compile Include="DMD\Sistema\ModuleActions\ActionsResult\ModuleActionResult.cs" />
+    <Compile Include="DMD\Sistema\ModuleActions\Handlers\ModuleActionHandler.cs" />
+    <Compile Include="DMD\Sistema\Notifiche\AzioniRegistrate\AzioneRegistrata.cs" />
+    <Compile Include="DMD\Sistema\Notifiche\AzioneEseguita\AzioneEseguita.cs" />
+    <Compile Include="DMD\Sistema\Notifiche\NotificaCursor.cs" />
+    <Compile Include="DMD\Sistema\Notifiche\Notifiche.cs" />
+    <Compile Include="DMD\Sistema\Notifiche\AzioniEseguibili\AzioneEseguibile.cs" />
+    <Compile Include="DMD\Sistema\Notifiche\Notifica.cs" />
+    <Compile Include="DMD\Sistema\PropertyPages\PropertyPages.cs" />
+    <Compile Include="DMD\Sistema\PropertyPages\CRegisteredPropertyPageCursor.cs" />
+    <Compile Include="DMD\Sistema\PropertyPages\CRegisteredPropertyPage.cs" />
+    <Compile Include="DMD\Sistema\Settings\CSettingRecordCursor.cs" />
+    <Compile Include="DMD\Sistema\Settings\CSettingRecord.cs" />
+    <Compile Include="DMD\Sistema\Settings\CSettingRecords.cs" />
+    <Compile Include="DMD\Sistema\Users\Args\UserLogoutEventArgs.cs" />
+    <Compile Include="DMD\Sistema\Users\Args\UserLoginEventArgs.cs" />
+    <Compile Include="DMD\Sistema\Users\Args\UserEventArgs.cs" />
+    <Compile Include="DMD\Sistema\Users\Exceptions\PasswordExpiredException.cs" />
+    <Compile Include="DMD\Sistema\Users\Exceptions\UserForcePwdPasswordException.cs" />
+    <Compile Include="DMD\Sistema\Users\Exceptions\BadPasswordException.cs" />
+    <Compile Include="DMD\Sistema\Users\Exceptions\UserNotEnabledException.cs" />
+    <Compile Include="DMD\Sistema\Users\Exceptions\UserNotFoundException.cs" />
+    <Compile Include="DMD\Sistema\Users\Exceptions\UserLoginException.cs" />
+    <Compile Include="DMD\Sistema\Users\Exceptions\UserExpiredException.cs" />
+    <Compile Include="DMD\Sistema\Users\Args\UserLogEventArgs.cs" />
+    <Compile Include="DMD\Sistema\Backup\Backups.cs" />
+    <Compile Include="DMD\Sistema\EMailSys\Config\CEmailConfig.cs" />
+    <Compile Include="DMD\Sistema\EMailSys\EMailService.cs" />
+    <Compile Include="DMD\Sistema\Events\Handlers\CBaseEventHandler.cs" />
+    <Compile Include="DMD\Sistema\Events\RegisteredEventsHandler\RegisteredEventHandlerCursor.cs" />
+    <Compile Include="DMD\Sistema\Events\RegisteredEventsHandler\RegisteredEventHandlers.cs" />
+    <Compile Include="DMD\Sistema\Events\RegisteredEventsHandler\RegisteredEventHandler.cs" />
+    <Compile Include="DMD\Sistema\Events\Log\CEventsCursor.cs" />
+    <Compile Include="DMD\Sistema\Events\Handlers\IEventHandler.cs" />
+    <Compile Include="DMD\Sistema\Events\Events.cs" />
+    <Compile Include="DMD\Sistema\Events\Log\CEventLog.cs" />
+    <Compile Include="DMD\Sistema\Events\Log\CEventsFilter.cs" />
+    <Compile Include="DMD\Sistema\Groups\GroupAuthorizations\CGroupAuthorization.cs" />
+    <Compile Include="DMD\Sistema\Groups\GroupAuthorizations\CGroupAuthorizationCursor.cs" />
+    <Compile Include="DMD\Sistema\Groups\GroupAuthorizations\CGroupAuthorizationsCollection.cs" />
+    <Compile Include="DMD\Sistema\Groups\CGroup.cs" />
+    <Compile Include="DMD\Sistema\ModuleActions\AzioniDefinite\CModuleAction.cs" />
+    <Compile Include="DMD\Sistema\ModuleActions\AzioniDefinite\CModuleActions.cs" />
+    <Compile Include="DMD\Sistema\ModuleActions\AzioniDefinite\CModuleActionsCursor.cs" />
+    <Compile Include="DMD\Sistema\ModuleActions\AzioniDefinite\CDefinedActionsRepository.cs" />
+    <Compile Include="DMD\Sistema\Modules\ModulesXGroup\CModuleXGroupCursor.cs" />
+    <Compile Include="DMD\Sistema\Modules\ModulesXGroup\CModuleXGroupCollection.cs" />
+    <Compile Include="DMD\Sistema\Modules\ModulesXUser\CModuleXUserCollection.cs" />
+    <Compile Include="DMD\Sistema\Modules\ModulesXUser\CModuleXUserCursor.cs" />
+    <Compile Include="DMD\Sistema\Modules\ModulesXUser\CModuleXUser.cs" />
+    <Compile Include="DMD\Sistema\Modules\CModule.cs" />
+    <Compile Include="DMD\Sistema\Modules\CModulesCollection.cs" />
+    <Compile Include="DMD\Sistema\Modules\CModulesCursor.cs" />
+    <Compile Include="DMD\Sistema\Modules\Events\ModuleEventArgs.cs" />
+    <Compile Include="DMD\Sistema\Modules\CModulesModeClass.cs" />
+    <Compile Include="DMD\Sistema\Modules\ModulesXGroup\CModuleXGroup.cs" />
+    <Compile Include="DMD\Sistema\FileSystem\FileSystem.cs" />
+    <Compile Include="DMD\Sistema\Groups\Groups.cs" />
+    <Compile Include="DMD\Sistema\Users\UserAuthorizations\CUserAuthorizationsCollection.cs" />
+    <Compile Include="DMD\Sistema\Users\UserAuthorizations\CUserAuthorizationCursor.cs" />
+    <Compile Include="DMD\Sistema\Users\UserAuthorizations\CUserAuthorization.cs" />
+    <Compile Include="DMD\Sistema\Users\KnownUsers.cs" />
+    <Compile Include="DMD\Sistema\Users\Comparers\CUserComparer.cs" />
+    <Compile Include="DMD\Sistema\Users\Comparers\CUsersComparer.cs" />
+    <Compile Include="DMD\Sistema\Users\UsersXGroup\CUserXGroupCursor.cs" />
+    <Compile Include="DMD\Sistema\Users\UsersXGroup\CUserXGroup.cs" />
+    <Compile Include="DMD\Sistema\Users\CUserGroups.cs" />
+    <Compile Include="DMD\Sistema\Users\CUserCursor.cs" />
+    <Compile Include="DMD\Sistema\Users\CUser.cs" />
+    <Compile Include="DMD\Sistema\Users\Users.cs" />
+    <Compile Include="My Project\AssemblyInfo.cs" />
+    <Compile Include="My Project\Application.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>minidom.My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MiniDOMBase.vsdoc" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>minidom.My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DMD\Luoghi\Luoghi.cs" />
+    <Compile Include="DMD\Sistema\Sistema.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DMD\Databases\Old\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DMD\Licensing\MiniDOMLicense.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\CommonProjects\DMDCore\DMDCore.csproj">
+      <Project>{6BC7376F-F45B-4E4B-BE89-8D8378A6384C}</Project>
+      <Name>DMDCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CommonProjects\DMDFAXService\DMDFAXService.csproj">
+      <Project>{d1361a1e-e6d0-4f02-8374-8bf6a9aa8bd1}</Project>
+      <Name>DMDFAXService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CommonProjects\DMDGPSLib\DMDGPSLib.csproj">
+      <Project>{f3db82a0-8bbf-43be-a79e-9658bea40a59}</Project>
+      <Name>DMDGPSLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CommonProjects\DMDNetLib\DMDNetLib.csproj">
+      <Project>{46bd1788-1d0d-4cea-ae35-4f0434999794}</Project>
+      <Name>DMDNetLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CommonProjects\DMDSMSService\DMDSMSService.csproj">
+      <Project>{c54743c8-bec3-4bac-b363-86af7bc3ddf2}</Project>
+      <Name>DMDSMSService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CommonProjects\DMDTelephoneService\DMDTelephoneService.csproj">
+      <Project>{1f670f77-b992-4b0c-9f3c-01fcb7cc60af}</Project>
+      <Name>DMDTelephoneService</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

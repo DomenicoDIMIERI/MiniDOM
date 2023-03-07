@@ -1,0 +1,4 @@
+C:\TFS\DMDShop2\MiniDOM\MiniDOMWebCtrls\obj\Debug\MiniDOMWebCtrls.csproj.AssemblyReference.cache
+C:\TFS\DMDShop2\MiniDOM\MiniDOMWebCtrls\obj\Debug\minidom.Resources.resources
+C:\TFS\DMDShop2\MiniDOM\MiniDOMWebCtrls\obj\Debug\MiniDOMWebCtrls.csproj.GenerateResource.cache
+C:\TFS\DMDShop2\MiniDOM\MiniDOMWebCtrls\obj\Debug\MiniDOMWebCtrls.csproj.CoreCompileInputs.cache

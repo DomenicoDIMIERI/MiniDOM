@@ -1,0 +1,3 @@
+C:\TFS\DMDShop2\MiniDOM\MiniDOMAsteriskLib\obj\Debug\minidom.Resources.resources
+C:\TFS\DMDShop2\MiniDOM\MiniDOMAsteriskLib\obj\Debug\MiniDOMAsteriskLib.csproj.GenerateResource.cache
+C:\TFS\DMDShop2\MiniDOM\MiniDOMAsteriskLib\obj\Debug\MiniDOMAsteriskLib.csproj.CoreCompileInputs.cache

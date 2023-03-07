@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{34177944-33FA-495C-9E8A-1089C0DD0889}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>minidom.diallib</RootNamespace>
+    <AssemblyName>MiniDOMSIP</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>MiniDOMSIP.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>MiniDOMSIP.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DefineConstants>VERBOSE=0, ENABLEHOOKS=False</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DocumentationFile>MiniDOMSIP.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DocumentationFile>MiniDOMSIP.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ionic.Zip">
+      <HintPath>..\..\..\Librerie\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="LumiSoft.Net">
+      <HintPath>..\..\..\Librerie\LumiSoft.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Activation" />
+    <Reference Include="System.ServiceModel.Activities" />
+    <Reference Include="System.ServiceModel.Channels" />
+    <Reference Include="System.ServiceModel.Discovery" />
+    <Reference Include="System.ServiceModel.Routing" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="WavPlayer, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Librerie\WavPlayer.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Chiamate\Chiamata.vb" />
+    <Compile Include="Chiamate\Chiamate.vb" />
+    <Compile Include="Chiamate\ChiamateCursor.vb" />
+    <Compile Include="Config\AsteriskServer.vb" />
+    <Compile Include="Config\AsteriskServers.vb" />
+    <Compile Include="Config\DIALTPCommand\DMDSIPCommand.vb" />
+    <Compile Include="Config\IntervalloLavoro.vb" />
+    <Compile Include="Config\DIALTP\DialTPConfigs.vb" />
+    <Compile Include="Config\DIALTP\DMDSIPConfigCursor.vb" />
+    <Compile Include="Config\DIALTP\DialTPConfig.vb" />
+    <Compile Include="Config\DispositivoEsterno.vb" />
+    <Compile Include="Config\LineaEsterna.vb" />
+    <Compile Include="Dialers\ExpressTalkDialer.vb" />
+    <Compile Include="DialTPApp.vb" />
+    <Compile Include="Dialers\3CXDialer.vb" />
+    <Compile Include="Dialers\AsteriskDialer.vb" />
+    <Compile Include="Dialers\BriaDialer.vb" />
+    <Compile Include="Dialers\CiscoDialer.vb" />
+    <Compile Include="Dialers\DialerBaseClass.vb" />
+    <Compile Include="Dialers\Dialers.vb" />
+    <Compile Include="Dialers\DialTPInterpreter.vb" />
+    <Compile Include="Dialers\XLiteDialer.vb" />
+    <Compile Include="DialTPLib\CLogSession.vb" />
+    <Compile Include="Interfono\Interfono.vb" />
+    <Compile Include="DialTPLib\ScreenShot.vb" />
+    <Compile Include="DialTPLib\Settings.vb" />
+    <Compile Include="DialTPLib\Log.vb" />
+    <Compile Include="DialTPLib\Remote.vb" />
+    <Compile Include="Interfono\InterfonoPayLoad.vb" />
+    <Compile Include="Interfono\InterfonoConnection.vb" />
+    <Compile Include="Interfono\InterfonoParams.vb" />
+    <Compile Include="Interfono\InterfonoService.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PagineBiancheAnalizer.vb" />
+    <Compile Include="ScreenShots\ScreenShots.vb" />
+    <Compile Include="USB\USBDriveHandler.vb" />
+    <Compile Include="WebPageAnalizer.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DMDAsteriskLib\MiniDOMAsteriskLib.vbproj">
+      <Project>{198fdf25-464c-4aa2-9060-a9611d23f84c}</Project>
+      <Name>MiniDOMAsteriskLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DMDControls\MiniDOMControls.vbproj">
+      <Project>{098af559-44ca-433e-886d-cdec70eeaaff}</Project>
+      <Name>MiniDOMControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DMDLibs\MiniDOMBase.vbproj">
+      <Project>{d6154502-e7f9-4dfc-a695-6b51afee770b}</Project>
+      <Name>MiniDOMBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DMDOffice\MiniDOMOffice.vbproj">
+      <Project>{af8567a3-b154-4f14-aaf7-223253fa523d}</Project>
+      <Name>MiniDOMOffice</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\DMDShop2\DMDWebLibs\DMDWeb.vbproj">
+      <Project>{28820d4c-d20d-48d1-980f-4c230bc6e95e}</Project>
+      <Name>DMDWeb</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DMDWebLibs\MiniDOMWebLibs.vbproj">
+      <Project>{a5031612-2b03-4a86-a3ad-59ce287b6955}</Project>
+      <Name>MiniDOMWebLibs</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FastDirectoryEnumerator.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\favicon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

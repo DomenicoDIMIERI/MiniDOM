@@ -1,0 +1,446 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3CBF1FA6-9D7A-4745-8B56-4E2C47670209}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>minidom</RootNamespace>
+    <AssemblyName>MiniDOMFinanziaria</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>MiniDOMFinanziaria.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>MiniDOMFinanziaria.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DocumentationFile>MiniDOMFinanziaria.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <DefineConstants>UsaDataAttivazione=true</DefineConstants>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DocumentationFile>MiniDOMFinanziaria.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <DefineConstants>UsaDataAttivazione=true</DefineConstants>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DocumentationFile>MiniDOMFinanziaria.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DocumentationFile>MiniDOMFinanziaria.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Finanziaria\CalendarProviders\CQSPDCalendarProviderStPrat.vb" />
+    <Compile Include="Finanziaria\CalendarProviders\CQSPDCalendarProviderRichAppr.vb" />
+    <Compile Include="Finanziaria\CalendarProviders\CQSPDCalendarProviderFL.vb" />
+    <Compile Include="Finanziaria\AreaManagers\AreaManagers.vb" />
+    <Compile Include="Finanziaria\AreaManagers\CAreaManager.vb" />
+    <Compile Include="Finanziaria\AreaManagers\CAreaManagerCursor.vb" />
+    <Compile Include="Finanziaria\AreaManagers\CAMPraticheCollection.vb" />
+    <Compile Include="Finanziaria\Assicurazioni\CAssicurazione.vb" />
+    <Compile Include="Finanziaria\Assicurazioni\CAssicurazioniCursor.vb" />
+    <Compile Include="Finanziaria\Assicurazioni\Assicurazioni.vb" />
+    <Compile Include="Finanziaria\Collaboratori\NotaCollaboratore\NotaCollaboratore.vb" />
+    <Compile Include="Finanziaria\Collaboratori\NotaCollaboratore\NotaCollaboratoreCursor.vb" />
+    <Compile Include="Finanziaria\Collaboratori\NotaCollaboratore\NoteCollaboratoreCollection.vb" />
+    <Compile Include="Finanziaria\Collaboratori\PortafoglioClienti\ClienteXCollaboratoreCursor.vb" />
+    <Compile Include="Finanziaria\Collaboratori\PortafoglioClienti\ClienteXCollaboratore.vb" />
+    <Compile Include="Finanziaria\Collaboratori\PortafoglioClienti\ClientiXCollaboratori.vb" />
+    <Compile Include="Finanziaria\Collaboratori\Premi\SogliePremioCollection.vb" />
+    <Compile Include="Finanziaria\Collaboratori\Premi\CSogliePremiCursor.vb" />
+    <Compile Include="Finanziaria\Collaboratori\Premi\CSogliaPremio.vb" />
+    <Compile Include="Finanziaria\Collaboratori\Premi\CSetPremiCursor.vb" />
+    <Compile Include="Finanziaria\Convenzioni\AziendeXConvenzione\AziendaXConvenzione.vb" />
+    <Compile Include="Finanziaria\Convenzioni\AziendeXConvenzione\AziendaXConvenzioneCollection.vb" />
+    <Compile Include="Finanziaria\Convenzioni\AziendeXConvenzione\AziendaXConvenzioneCursor.vb" />
+    <Compile Include="Finanziaria\ConteggiEstintivi\CConteggioEstintivo.vb" />
+    <Compile Include="Finanziaria\ConteggiEstintivi\CConteggioEstintivoCursor.vb" />
+    <Compile Include="Finanziaria\ConteggiEstintivi\ConteggiEstintivi.vb" />
+    <Compile Include="Finanziaria\StatisticheLavorazione\CQSPDMLInfo.vb" />
+    <Compile Include="Finanziaria\FinestreLavorazione\Messaggi\FinestraLavorazioneMsg.vb" />
+    <Compile Include="Finanziaria\FinestreLavorazione\Pratiche\PratichePerFinestraLavorazione.vb" />
+    <Compile Include="Finanziaria\ImportExport\CImportExport.vb" />
+    <Compile Include="Finanziaria\ImportExport\CImportExportCursor.vb" />
+    <Compile Include="Finanziaria\ImportExport\Sorgentei\CImportExportSourceUserMap.vb" />
+    <Compile Include="Finanziaria\ImportExport\Sorgentei\CImportExportSourceUserMatch.vb" />
+    <Compile Include="Finanziaria\ImportExport\CImportExportMatch.vb" />
+    <Compile Include="Finanziaria\ImportExport\ImportExport.vb" />
+    <Compile Include="Finanziaria\FinestreLavorazione\FinestraLavorazioneXML.vb" />
+    <Compile Include="Finanziaria\FinestreLavorazione\FinestreDiLavorazione.vb" />
+    <Compile Include="Finanziaria\FinestreLavorazione\FinestraLavorazioneCursor.vb" />
+    <Compile Include="Finanziaria\FinestreLavorazione\FinestraLavorazione.vb" />
+    <Compile Include="Finanziaria\Collaboratori\Provvigioni\CProvvigionale.vb" />
+    <Compile Include="Finanziaria\Collaboratori\Premi\SetPremi.vb" />
+    <Compile Include="Finanziaria\Estinzioni\CEstinzioniCollection.vb" />
+    <Compile Include="Finanziaria\GruppiProdotto\DocumentiXGruppoProdotti\VincoliProdotto.vb" />
+    <Compile Include="Finanziaria\ImportExport\Sorgentei\CImportExportSource.vb" />
+    <Compile Include="Finanziaria\ImportExport\Sorgentei\CImportExportSourceCursor.vb" />
+    <Compile Include="Finanziaria\ImportExport\Sorgentei\ImportExportSources.vb" />
+    <Compile Include="Finanziaria\Pratiche\Correzioni\CCorrezionePratica.vb" />
+    <Compile Include="Finanziaria\Pratiche\ObiettiviXCategoriaProdotto\CObiettiviCategoriaProdottoClass.vb" />
+    <Compile Include="Finanziaria\Pratiche\ObiettiviXCategoriaProdotto\CObiettivoCategoriaProdotto.vb" />
+    <Compile Include="Finanziaria\Pratiche\ObiettiviXCategoriaProdotto\CObiettivoCategoriaProdottoCursor.vb" />
+    <Compile Include="Finanziaria\Preventivi\Offerte\COffertaCQSCalculator.vb" />
+    <Compile Include="Finanziaria\Preventivi\Offerte\Evaluators\CCQSPDProvvigioneXOffertaUrlEvaluator.vb" />
+    <Compile Include="Finanziaria\Preventivi\Offerte\Evaluators\CCQSPDProvvigioneXOffertaEvaluator.vb" />
+    <Compile Include="Finanziaria\Preventivi\Offerte\ProvvigioneXOfferta\CCQSPDProvvigioneXOfferta.vb" />
+    <Compile Include="Finanziaria\Preventivi\Offerte\ProvvigioneXOfferta\CCQSPDProvvigioneXOffertaCollection.vb" />
+    <Compile Include="Finanziaria\Preventivi\Offerte\ProvvigioneXOfferta\CCQSPDProvvigioneXOffertaCursor.vb" />
+    <Compile Include="Finanziaria\Prodotti\CategorieProdotto\CCategoriaProdotto.vb" />
+    <Compile Include="Finanziaria\Prodotti\CategorieProdotto\CategorieProdottoClass.vb" />
+    <Compile Include="Finanziaria\Prodotti\CategorieProdotto\CCategorieProdottoCursor.vb" />
+    <Compile Include="Finanziaria\RichiestaApprovazioneGroup\RichiesteApprovazioneCollection.vb" />
+    <Compile Include="Finanziaria\RichiestaApprovazioneGroup\RichiestaApprovazioneGroupClass.vb" />
+    <Compile Include="Finanziaria\RichiestaApprovazioneGroup\RichiestaApprovazioneGroup.vb" />
+    <Compile Include="Finanziaria\RichiestaApprovazioneGroup\RichiestaApprovazioneGroupCursor.vb" />
+    <Compile Include="Finanziaria\StatisticheLavorazione\CQSPD.vb" />
+    <Compile Include="Finanziaria\StatisticheLavorazione\CStatsItem.vb" />
+    <Compile Include="Finanziaria\StatisticheLavorazione\CQSPDCPHSTATINFO.vb" />
+    <Compile Include="Finanziaria\StatisticheLavorazione\CQSPDInfoAnalisiAnomalie.vb" />
+    <Compile Include="Finanziaria\StatisticheLavorazione\StatisticheLavorazione.vb" />
+    <Compile Include="Finanziaria\StatisticheLavorazione\StatisticaLavorazione.vb" />
+    <Compile Include="Finanziaria\TipiProvvigione\CQSPDTipoProvvigioneCollection.vb" />
+    <Compile Include="Finanziaria\TipiProvvigione\CCQSPDTipoProvvigioneCursor.vb" />
+    <Compile Include="Finanziaria\TipiProvvigione\CCQSPDTipoProvvigione.vb" />
+    <Compile Include="Finanziaria\Prodotti\ConvenzioniXProdotto\CProdottoXConvenzione.vb" />
+    <Compile Include="Finanziaria\Prodotti\ConvenzioniXProdotto\CProdottoXConvenzioneCollection.vb" />
+    <Compile Include="Finanziaria\Prodotti\ConvenzioniXProdotto\CProdottoXConvenzioneCursor.vb" />
+    <Compile Include="Finanziaria\Prodotti\TabelleAssicurativeXProdotto\CProdottoXTabellaAss.vb" />
+    <Compile Include="Finanziaria\Prodotti\TabelleAssicurativeXProdotto\CProdottoXTabellaAssCursor.vb" />
+    <Compile Include="Finanziaria\Prodotti\TabelleAssicurativeXProdotto\CTabelleAssicurativeProdottoCollection.vb" />
+    <Compile Include="Finanziaria\RichiesteDeroghe\CRichiestaDeroga.vb" />
+    <Compile Include="Finanziaria\RichiesteDeroghe\CRichiestaDerogaCursor.vb" />
+    <Compile Include="Finanziaria\RichiesteDeroghe\RichiesteDeroghe.vb" />
+    <Compile Include="Finanziaria\ValutazioneAzienda\CQSPDValutazioneAssicurazione.vb" />
+    <Compile Include="Finanziaria\ValutazioneAzienda\CQSPDValutazioneAzienda.vb" />
+    <Compile Include="Finanziaria\ValutazioneAzienda\CQSPDValutazioniAziendaModule.vb" />
+    <Compile Include="Finanziaria\ValutazioneAzienda\CQSPDValutazioneAziendaCursor.vb" />
+    <Compile Include="Finanziaria\VerificheAmministrative\IOggettoVerificabile.vb" />
+    <Compile Include="Finanziaria\VerificheAmministrative\VerificaAmministrativa.vb" />
+    <Compile Include="Finanziaria\VerificheAmministrative\VerificheAmministrativeCursor.vb" />
+    <Compile Include="Finanziaria\VerificheAmministrative\VerificheAmministrative.vb" />
+    <Compile Include="Finanziaria\CTAEGCalculator.vb" />
+    <Compile Include="Finanziaria\CTANInverter.vb" />
+    <Compile Include="Finanziaria\CTANFunEvaluator.vb" />
+    <Compile Include="Finanziaria\Handlers\StoricoHandlerStudiF.vb" />
+    <Compile Include="Finanziaria\Handlers\StoricoHandlerRichFin.vb" />
+    <Compile Include="Finanziaria\Handlers\StoricoHandlerPratiche.vb" />
+    <Compile Include="Finanziaria\Handlers\FindPersonaByNumeroPratica.vb" />
+    <Compile Include="Finanziaria\Handlers\StoricoHandlerRichiesteConteggiEstintivi - Copia.vb" />
+    <Compile Include="Finanziaria\Handlers\StoricoElaborazioni.vb" />
+    <Compile Include="Finanziaria\Pratiche\Statistiche\ClientiLavorati\ClientiLavoratiFilter.vb" />
+    <Compile Include="Finanziaria\Pratiche\Statistiche\ClientiLavorati\ClientiLavoratiStats.vb" />
+    <Compile Include="Finanziaria\Pratiche\Statistiche\ClientiLavorati\ClientiLavoratiStatsItem.vb" />
+    <Compile Include="Finanziaria\Pratiche\Statistiche\ClientiLavorati\ClientiLavoratiStatsItemCursor.vb" />
+    <Compile Include="Finanziaria\Pratiche\Statistiche\CQSFastStats.vb" />
+    <Compile Include="Finanziaria\Pratiche\Statistiche\CQSFilter.vb" />
+    <Compile Include="Finanziaria\Pratiche\Statistiche\Liquidato\LiquidatoFilter.vb" />
+    <Compile Include="Finanziaria\Pratiche\Statistiche\Liquidato\LiquidatoStats.vb" />
+    <Compile Include="Finanziaria\Pratiche\Statistiche\Liquidato\LiquidatoStatsItem.vb" />
+    <Compile Include="Finanziaria\RichiestaApprovazioneGroup\RichiesteApprovazione\CRichiesteApprovazioneClass.vb" />
+    <Compile Include="Finanziaria\RichiestaApprovazioneGroup\RichiesteApprovazione\IOggettoApprovabile.vb" />
+    <Compile Include="Finanziaria\RichiestaApprovazioneGroup\RichiesteApprovazione\CRichiestaApprovazione.vb" />
+    <Compile Include="Finanziaria\RichiestaApprovazioneGroup\RichiesteApprovazione\CRichiestaApprovazioneCursor.vb" />
+    <Compile Include="Finanziaria\Pratiche\CInfoStato.vb" />
+    <Compile Include="Finanziaria\RichiestaApprovazioneGroup\RichiesteApprovazione\MotiviSconto\CMotiviScontoPraticaClass.vb" />
+    <Compile Include="Finanziaria\RichiestaApprovazioneGroup\RichiesteApprovazione\MotiviSconto\CMotivoScontoPratica.vb" />
+    <Compile Include="Finanziaria\RichiestaApprovazioneGroup\RichiesteApprovazione\MotiviSconto\CMotivoScontoPraticaCursor.vb" />
+    <Compile Include="Finanziaria\Pratiche\ObiettiviXProdotto\CObiettivoPratica.vb" />
+    <Compile Include="Finanziaria\Pratiche\ObiettiviXProdotto\CObiettivoPraticaCursor.vb" />
+    <Compile Include="Finanziaria\Pratiche\ObiettiviXProdotto\CObiettiviPraticaClass.vb" />
+    <Compile Include="Finanziaria\Profili\GroupAllowNegate\CProfiloXGroupAllowNegate.vb" />
+    <Compile Include="Finanziaria\Profili\GroupAllowNegate\CProfiloXGroupAllowNegateCollection.vb" />
+    <Compile Include="Finanziaria\Profili\GroupAllowNegate\CProfiloXGroupAllowNegateCursor.vb" />
+    <Compile Include="Finanziaria\Profili\UserAllowNegate\CProfiloXUserAllowNegate.vb" />
+    <Compile Include="Finanziaria\Profili\UserAllowNegate\CProfiloXUserAllowNegateCollection.vb" />
+    <Compile Include="Finanziaria\Profili\UserAllowNegate\CProfiloXUserAllowNegateCursor.vb" />
+    <Compile Include="Finanziaria\AltriPreventivi\CAltroPreventivo.vb" />
+    <Compile Include="Finanziaria\AltriPreventivi\CAltroPreventivoCursor.vb" />
+    <Compile Include="Finanziaria\AltriPreventivi\CAltriPreventiviXRichiesta.vb" />
+    <Compile Include="Finanziaria\RichiesteConteggiEstintivi\RichiesteConteggi.vb" />
+    <Compile Include="Finanziaria\RichiesteConteggiEstintivi\CRichiesteConteggiXRichiesta.vb" />
+    <Compile Include="Finanziaria\RichiesteConteggiEstintivi\CRichiestaConteggio.vb" />
+    <Compile Include="Finanziaria\RichiesteConteggiEstintivi\CRichiestaConteggioCursor.vb" />
+    <Compile Include="Finanziaria\SituazionePersona\CQSPSituazionePersona.vb" />
+    <Compile Include="Finanziaria\SituazioneUfficio\CQSPSituazioneUfficio.vb" />
+    <Compile Include="Finanziaria\StudiDiFattibilita\CQSPDSoluzioniXStudioDiFattibilita.vb" />
+    <Compile Include="Finanziaria\StudiDiFattibilita\StudiDiFattibilita.vb" />
+    <Compile Include="Finanziaria\StudiDiFattibilita\CQSPDStudioDiFattibilita.vb" />
+    <Compile Include="Finanziaria\StudiDiFattibilita\CQSPDStudiDiFattibilitaCursor.vb" />
+    <Compile Include="Finanziaria\Convenzioni\Convenzioni.vb" />
+    <Compile Include="Finanziaria\Convenzioni\CQSPDConvenzioniCursor.vb" />
+    <Compile Include="Finanziaria\Convenzioni\CQSPDConvenzione.vb" />
+    <Compile Include="Finanziaria\GruppiProdotto\DocumentiXGruppoProdotti\CDocumentiXGruppoProdottiCursor.vb" />
+    <Compile Include="Finanziaria\GruppiProdotto\DocumentiXGruppoProdotti\VincoloProdotto.vb" />
+    <Compile Include="Finanziaria\GruppiProdotto\DocumentiXGruppoProdotti\CDocumentiXGruppoProdottiCollection.vb" />
+    <Compile Include="Finanziaria\Pratiche\Azioni\CQSPDVisualizzaPratica.vb" />
+    <Compile Include="Finanziaria\RichiesteFinanziamenti\Azioni\PrendiInCaricoRichiestaFinanziamento.vb" />
+    <Compile Include="Finanziaria\RichiesteAssegni\CBeneficiarioRichiestaAssegni.vb" />
+    <Compile Include="Finanziaria\RichiesteAssegni\CBeneficiariCollection.vb" />
+    <Compile Include="Finanziaria\RichiesteAssegni\CRichiestaAssegniCursor.vb" />
+    <Compile Include="Finanziaria\RichiesteAssegni\CRichiestaAssegni.vb" />
+    <Compile Include="Finanziaria\Tabelle Assicurative\TabelleAssicurative.vb" />
+    <Compile Include="Finanziaria\Prodotti\TabelleSpeseXProdotto\CProdottoXTabellaSpesaCollection.vb" />
+    <Compile Include="Finanziaria\Prodotti\TabelleSpeseXProdotto\CProdottoXTabellaSpesaCursor.vb" />
+    <Compile Include="Finanziaria\Prodotti\TabelleSpeseXProdotto\CProdottoXTabellaSpesa.vb" />
+    <Compile Include="Finanziaria\Tabelle Assicurative\CTabelleAssicurativeCursor.vb" />
+    <Compile Include="Finanziaria\Tabelle Assicurative\CTabellaAssicurativa.vb" />
+    <Compile Include="Finanziaria\Prodotti\VincoliProdottoTabellaAss\CProdTabAssConstraintCursor.vb" />
+    <Compile Include="Finanziaria\Prodotti\VincoliProdottoTabellaAss\CProdTabAssConstraint.vb" />
+    <Compile Include="Finanziaria\Prodotti\VincoliProdottoTabellaAss\CVincoliProdottoTabellaAss.vb" />
+    <Compile Include="Finanziaria\TeamManagers\CTeamManagersCursor.vb" />
+    <Compile Include="Finanziaria\TeamManagers\CTeamManager.vb" />
+    <Compile Include="Finanziaria\TeamManagers\TeamManagers.vb" />
+    <Compile Include="Finanziaria\Collaboratori\TrattativeCollaboratore\CTrattativeCollaboratore.vb" />
+    <Compile Include="Finanziaria\Collaboratori\TrattativeCollaboratore\CTrattativeCollaboratoreCursor.vb" />
+    <Compile Include="Finanziaria\Collaboratori\TrattativeCollaboratore\CTrattativaCollaboratore.vb" />
+    <Compile Include="Finanziaria\Collaboratori\TrattativeCollaboratore\TrattativeCollaboratore.vb" />
+    <Compile Include="Finanziaria\CTAEGFunEvaluator.vb" />
+    <Compile Include="Finanziaria\CTEGFunEvaluator.vb" />
+    <Compile Include="Finanziaria\TeamManagers\CCollaboratoreCollection.vb" />
+    <Compile Include="Finanziaria\Collaboratori\CCollaboratore.vb" />
+    <Compile Include="Finanziaria\Collaboratori\CCollaboratoriCursor.vb" />
+    <Compile Include="Finanziaria\Collaboratori\Collaboratori.vb" />
+    <Compile Include="Finanziaria\Collaboratori\Fonte\CollaboratoriFonteProvider.vb" />
+    <Compile Include="Finanziaria\Collaboratori\Pratiche\CPratichePerCollabCollection.vb" />
+    <Compile Include="Finanziaria\Pratiche\DocumentiXPratica\CDocumentoPraticaCaricato.vb" />
+    <Compile Include="Finanziaria\Pratiche\DocumentiXPratica\CDocumentoPraticaCaricatoCursor.vb" />
+    <Compile Include="Finanziaria\Pratiche\DocumentiXPratica\CDocumentoPraticaCaricatoCollection.vb" />
+    <Compile Include="Finanziaria\CTAEGInverter.vb" />
+    <Compile Include="Finanziaria\CTANCalculator.vb" />
+    <Compile Include="Finanziaria\Allowed IP\CAllowedRemoteIPs.vb" />
+    <Compile Include="Finanziaria\Allowed IP\CAllowedRemoteIPsCursor.vb" />
+    <Compile Include="Finanziaria\AltriPrestiti\CAltroPrestito.vb" />
+    <Compile Include="Finanziaria\AltriPrestiti\CAltriPrestitiCursor.vb" />
+    <Compile Include="Finanziaria\AltriPrestiti\AltriPrestiti.vb" />
+    <Compile Include="Finanziaria\Cessionari\CCQSPDCessionarioClass.vb" />
+    <Compile Include="Finanziaria\Cessionari\Cessionari.vb" />
+    <Compile Include="Finanziaria\Cessionari\CCessionariCursor.vb" />
+    <Compile Include="Finanziaria\COpStatRecord.vb" />
+    <Compile Include="Finanziaria\Config\Config.vb" />
+    <Compile Include="Finanziaria\Consulenti\Consulenti.vb" />
+    <Compile Include="Finanziaria\Consulenti\CConsulentePratica.vb" />
+    <Compile Include="Finanziaria\Consulenti\CConsulentiPraticaCursor.vb" />
+    <Compile Include="Finanziaria\StudiDiFattibilita\Soluzioni\CQSPDConsulenzaCursor.vb" />
+    <Compile Include="Finanziaria\StudiDiFattibilita\Soluzioni\CQSPDConsulenza.vb" />
+    <Compile Include="Finanziaria\StudiDiFattibilita\Soluzioni\Consulenze.vb" />
+    <Compile Include="Finanziaria\EstinzioniXEstintore\IEstintore.vb" />
+    <Compile Include="Finanziaria\EstinzioniXEstintore\EstinzioneXEstintoreCursor.vb" />
+    <Compile Include="Finanziaria\EstinzioniXEstintore\EstinzioneXEstintore.vb" />
+    <Compile Include="Finanziaria\StudiDiFattibilita\Soluzioni\OffertePropostePerConsulenza.vb" />
+    <Compile Include="Finanziaria\Costi\CCosto.vb" />
+    <Compile Include="Finanziaria\Estinzioni\CEstinzione.vb" />
+    <Compile Include="Finanziaria\Estinzioni\CEstinzioniCursor.vb" />
+    <Compile Include="Finanziaria\EstinzioniXEstintore\CEstinzioniXEstintoreCollection.vb" />
+    <Compile Include="Finanziaria\Estinzioni\CEstinzioneCalculator.vb" />
+    <Compile Include="Finanziaria\Estinzioni\EstinzioneXPersona\CEstinzioniPersona.vb" />
+    <Compile Include="Finanziaria\Estinzioni\Estinzioni.vb" />
+    <Compile Include="Finanziaria\GruppiProdotto\CGruppoProdotti.vb" />
+    <Compile Include="Finanziaria\GruppiProdotto\CGruppoProdottiCursor.vb" />
+    <Compile Include="Finanziaria\GruppiProdotto\GruppiProdotto.vb" />
+    <Compile Include="Finanziaria\Pratiche\InfoPratica\CInfoPratica.vb" />
+    <Compile Include="Finanziaria\Pratiche\InfoPratica\CInfoPraticaCursor.vb" />
+    <Compile Include="Finanziaria\Pratiche\InfoPratica\InfoPratica.vb" />
+    <Compile Include="Finanziaria\Pratiche\StatiLavorazionePratica\CStatiLavorazionePraticaCollection.vb" />
+    <Compile Include="Finanziaria\Pratiche\StatiLavorazionePratica\CStatiLavorazionePraticaCursor.vb" />
+    <Compile Include="Finanziaria\Pratiche\StatiLavorazionePratica\StatiLavorazionePratica.vb" />
+    <Compile Include="Finanziaria\Pratiche\StatiPratica\CStatoPraticaCursor.vb" />
+    <Compile Include="Finanziaria\Pratiche\StatiPratica\CStatoPratica.vb" />
+    <Compile Include="Finanziaria\Pratiche\StatiPratica\VincoliStatoPratica\CStatoPratRuleCursor.vb" />
+    <Compile Include="Finanziaria\Pratiche\StatiPratica\VincoliStatoPratica\CStatoPratRule.vb" />
+    <Compile Include="Finanziaria\Pratiche\StatiPratica\VincoliStatoPratica\CStatoPratRulesCollection.vb" />
+    <Compile Include="Finanziaria\Pratiche\StatiPratica\VincoliStatoPratica\StatiPratRules.vb" />
+    <Compile Include="Finanziaria\Preventivi\CPreventivo.vb" />
+    <Compile Include="Finanziaria\Preventivi\CPreventivoCursor.vb" />
+    <Compile Include="Finanziaria\Preventivi\Preventivi.vb" />
+    <Compile Include="Finanziaria\Profili\CProfiloComparer.vb" />
+    <Compile Include="Finanziaria\Profili\CProfiliCursor.vb" />
+    <Compile Include="Finanziaria\Profili\CProfilo.vb" />
+    <Compile Include="Finanziaria\Profili\Profili.vb" />
+    <Compile Include="Finanziaria\Prodotti\CCQSPDProdotto.vb" />
+    <Compile Include="Finanziaria\Prodotti\Prodotti.vb" />
+    <Compile Include="Finanziaria\Prodotti\CProdottiCursor.vb" />
+    <Compile Include="Finanziaria\Prodotti\CProdottoComparer.vb" />
+    <Compile Include="Finanziaria\Preventivi\Offerte\COffertaCQS.vb" />
+    <Compile Include="Finanziaria\Preventivi\Offerte\CCQSPDOfferteCursor.vb" />
+    <Compile Include="Finanziaria\Preventivi\Offerte\CCQSPDOfferte.vb" />
+    <Compile Include="Finanziaria\Preventivi\Offerte\Offerte.vb" />
+    <Compile Include="Finanziaria\Pratiche\CPraticheCollection.vb" />
+    <Compile Include="Finanziaria\Pratiche\Pratiche.vb" />
+    <Compile Include="Finanziaria\Pratiche\CPraticaCQSPD.vb" />
+    <Compile Include="Finanziaria\Profili\ProdottiXProfilo\CProdottiXProfiloRelations.vb" />
+    <Compile Include="Finanziaria\Profili\ProdottiXProfilo\CProdottoProfilo.vb" />
+    <Compile Include="Finanziaria\Profili\ProdottiXProfilo\CProdottoProfiloCursor.vb" />
+    <Compile Include="Finanziaria\RichiesteFinanziamenti\RichiesteFinanziamento.vb" />
+    <Compile Include="Finanziaria\RichiesteFinanziamenti\CRichiestaFinanziamento.vb" />
+    <Compile Include="Finanziaria\Pratiche\StatiLavorazionePratica\CStatoLavorazionePratica.vb" />
+    <Compile Include="Finanziaria\Pratiche\StatiPratica\StatiPratica.vb" />
+    <Compile Include="Finanziaria\Pratiche\CPraticheCQSPDCursor.vb" />
+    <Compile Include="Finanziaria\Prodotti\VincoliProdottoTabellaFin\CProdTabFinConstraintCursor.vb" />
+    <Compile Include="Finanziaria\Prodotti\VincoliProdottoTabellaFin\CProdTabFinConstraint.vb" />
+    <Compile Include="Finanziaria\Prodotti\TabelleFinanziarieXProdotti\CTabelleFinanziarieProdottoCollection.vb" />
+    <Compile Include="Finanziaria\Prodotti\VincoliProdottoTabellaFin\CVincoliProdottoTabellaFin.vb" />
+    <Compile Include="Finanziaria\Prodotti\TabelleFinanziarieXProdotti\CProdottoXTabellaFinCursor.vb" />
+    <Compile Include="Finanziaria\Prodotti\TabelleFinanziarieXProdotti\CProdottoXTabellaFin.vb" />
+    <Compile Include="Finanziaria\Tabelle Finanziarie\CTabellaFinanziaria.vb" />
+    <Compile Include="Finanziaria\Tabelle Finanziarie\TabelleFinanziarie.vb" />
+    <Compile Include="Finanziaria\Tabelle Finanziarie\CTabelleFinanziarieCursor.vb" />
+    <Compile Include="Finanziaria\Vincoli su Tabelle\CTableConstraintCursor.vb" />
+    <Compile Include="Finanziaria\Vincoli su Tabelle\CTableConstraint.vb" />
+    <Compile Include="Finanziaria\Tabelle Spese\TabelleSpese.vb" />
+    <Compile Include="Finanziaria\Tabelle Spese\CTabellaSpeseCursor.vb" />
+    <Compile Include="Finanziaria\Tabelle Spese\CTabellaSpese.vb" />
+    <Compile Include="Finanziaria\Tabelle TEG Max\CQSPDRigheTEGMax.vb" />
+    <Compile Include="Finanziaria\Tabelle TEG Max\CRigaTEGMax.vb" />
+    <Compile Include="Finanziaria\Tabelle TEG Max\CRigheTEGMaxCursor.vb" />
+    <Compile Include="Finanziaria\Tabelle TEG Max\CTabellaTEGMax.vb" />
+    <Compile Include="Finanziaria\Tabelle TEG Max\CTabelleTEGMaxCursor.vb" />
+    <Compile Include="Finanziaria\Tabelle TEG Max\TabelleTEGMax.vb" />
+    <Compile Include="Finanziaria\TipiContratto\CTipoContrattoCursor.vb" />
+    <Compile Include="Finanziaria\TipiContratto\CTipoContratto.vb" />
+    <Compile Include="Finanziaria\TipiContratto\TipiContratto.vb" />
+    <Compile Include="Finanziaria\Visure\Visura.vb" />
+    <Compile Include="Finanziaria\Visure\Visure.vb" />
+    <Compile Include="Finanziaria\Visure\VisureCursor.vb" />
+    <Compile Include="Finanziaria\RichiesteAssegni\RichiestaAssegni.vb" />
+    <Compile Include="Finanziaria\RichiesteFinanziamenti\CRichiesteFinanziamentoCursor.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="Finanziaria\Finanziaria.vb" />
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Finanziaria\Zona\CZona.vb" />
+    <Compile Include="Finanziaria\Zona\CZonaCursor.vb" />
+    <Compile Include="Finanziaria\Zona\Zone.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\DMDShop2\DMDShop2\Common\DMDCore\DMDCore.csproj">
+      <Project>{6bc7376f-f45b-4e4b-be89-8d8378a6384c}</Project>
+      <Name>DMDCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DMDLibs\MiniDOMBase.vbproj">
+      <Project>{d6154502-e7f9-4dfc-a695-6b51afee770b}</Project>
+      <Name>MiniDOMBase</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

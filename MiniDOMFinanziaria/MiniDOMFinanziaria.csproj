@@ -1,0 +1,455 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8E9B9ECD-5122-08B4-090E-845225F036A9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>minidom</RootNamespace>
+    <AssemblyName>MiniDOMFinanziaria</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <DefaultItemExcludes>$(DefaultItemExcludes);$(ProjectDir)**\*.vb</DefaultItemExcludes>
+    <LangVersion>latest</LangVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>bin\Debug\MiniDOMFinanziaria.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>bin\Release\MiniDOMFinanziaria.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DocumentationFile>bin\x86\Debug\MiniDOMFinanziaria.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <DefineConstants>TRACE;DEBUG;UsaDataAttivazione</DefineConstants>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DocumentationFile>bin\x86\Release\MiniDOMFinanziaria.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <DefineConstants>UsaDataAttivazione=true</DefineConstants>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DocumentationFile>bin\x64\Debug\MiniDOMFinanziaria.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DocumentationFile>bin\x64\Release\MiniDOMFinanziaria.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Finanziaria\AltriPreventivi\CAltriPreventiviRepository.cs" />
+    <Compile Include="Finanziaria\FinestreLavorazione\CalendarProviders\CQSPDCalendarProviderFL.cs" />
+    <Compile Include="Finanziaria\Pratiche\Azioni\CAzioneCreaPratica.cs" />
+    <Compile Include="Finanziaria\Pratiche\CalendarProviders\CQSPDCalendarProviderFL.cs" />
+    <Compile Include="Finanziaria\Pratiche\CalendarProviders\CQSPDCalendarProviderStPrat.cs" />
+    <Compile Include="Finanziaria\RichiestaApprovazioneGroup\RichiesteApprovazione\CalendarProviders\CQSPDCalendarProviderRichAppr.cs" />
+    <Compile Include="My Project\MyNamespace.Static.1.Designer.cs" />
+    <Compile Include="Finanziaria\AreaManagers\AreaManagers.cs" />
+    <Compile Include="Finanziaria\AreaManagers\CAreaManager.cs" />
+    <Compile Include="Finanziaria\AreaManagers\CAreaManagerCursor.cs" />
+    <Compile Include="Finanziaria\AreaManagers\Pratiche\CAMPraticheCollection.cs" />
+    <Compile Include="Finanziaria\Assicurazioni\CAssicurazione.cs" />
+    <Compile Include="Finanziaria\Assicurazioni\CAssicurazioniCursor.cs" />
+    <Compile Include="Finanziaria\Assicurazioni\Assicurazioni.cs" />
+    <Compile Include="Finanziaria\Collaboratori\NotaCollaboratore\NotaCollaboratore.cs" />
+    <Compile Include="Finanziaria\Collaboratori\NotaCollaboratore\NotaCollaboratoreCursor.cs" />
+    <Compile Include="Finanziaria\Collaboratori\NotaCollaboratore\NoteCollaboratore.cs" />
+    <Compile Include="Finanziaria\Collaboratori\PortafoglioClienti\ClienteXCollaboratoreCursor.cs" />
+    <Compile Include="Finanziaria\Collaboratori\PortafoglioClienti\ClienteXCollaboratore.cs" />
+    <Compile Include="Finanziaria\Collaboratori\PortafoglioClienti\ClientiXCollaboratori.cs" />
+    <Compile Include="Finanziaria\Collaboratori\Premi\SogliePremioCollection.cs" />
+    <Compile Include="Finanziaria\Collaboratori\Premi\CSogliePremiCursor.cs" />
+    <Compile Include="Finanziaria\Collaboratori\Premi\CSogliaPremio.cs" />
+    <Compile Include="Finanziaria\Collaboratori\Premi\CSetPremiCursor.cs" />
+    <Compile Include="Finanziaria\Convenzioni\AziendeXConvenzione\AziendaXConvenzione.cs" />
+    <Compile Include="Finanziaria\Convenzioni\AziendeXConvenzione\AziendaXConvenzioneCollection.cs" />
+    <Compile Include="Finanziaria\Convenzioni\AziendeXConvenzione\AziendaXConvenzioneCursor.cs" />
+    <Compile Include="Finanziaria\ConteggiEstintivi\CConteggioEstintivo.cs" />
+    <Compile Include="Finanziaria\ConteggiEstintivi\CConteggioEstintivoCursor.cs" />
+    <Compile Include="Finanziaria\ConteggiEstintivi\ConteggiEstintivi.cs" />
+    <Compile Include="Finanziaria\StatisticheLavorazione\CQSPDMLInfo.cs" />
+    <Compile Include="Finanziaria\FinestreLavorazione\Messaggi\FinestraLavorazioneMsg.cs" />
+    <Compile Include="Finanziaria\FinestreLavorazione\Pratiche\PratichePerFinestraLavorazione.cs" />
+    <Compile Include="Finanziaria\ImportExport\CImportExport.cs" />
+    <Compile Include="Finanziaria\ImportExport\CImportExportCursor.cs" />
+    <Compile Include="Finanziaria\ImportExport\Sorgentei\CImportExportSourceUserMap.cs" />
+    <Compile Include="Finanziaria\ImportExport\Sorgentei\CImportExportSourceUserMatch.cs" />
+    <Compile Include="Finanziaria\ImportExport\CImportExportMatch.cs" />
+    <Compile Include="Finanziaria\ImportExport\ImportExport.cs" />
+    <Compile Include="Finanziaria\FinestreLavorazione\FinestraLavorazioneXML.cs" />
+    <Compile Include="Finanziaria\FinestreLavorazione\FinestreDiLavorazione.cs" />
+    <Compile Include="Finanziaria\FinestreLavorazione\FinestraLavorazioneCursor.cs" />
+    <Compile Include="Finanziaria\FinestreLavorazione\FinestraLavorazione.cs" />
+    <Compile Include="Finanziaria\Collaboratori\Provvigioni\CProvvigionale.cs" />
+    <Compile Include="Finanziaria\Collaboratori\Premi\SetPremi.cs" />
+    <Compile Include="Finanziaria\Estinzioni\CEstinzioniCollection.cs" />
+    <Compile Include="Finanziaria\GruppiProdotto\DocumentiXGruppoProdotti\VincoliProdotto.cs" />
+    <Compile Include="Finanziaria\ImportExport\Sorgentei\CImportExportSource.cs" />
+    <Compile Include="Finanziaria\ImportExport\Sorgentei\CImportExportSourceCursor.cs" />
+    <Compile Include="Finanziaria\ImportExport\Sorgentei\ImportExportSources.cs" />
+    <Compile Include="Finanziaria\Pratiche\Correzioni\CCorrezionePratica.cs" />
+    <Compile Include="Finanziaria\Pratiche\ObiettiviXCategoriaProdotto\CObiettiviCategoriaProdottoClass.cs" />
+    <Compile Include="Finanziaria\Pratiche\ObiettiviXCategoriaProdotto\CObiettivoCategoriaProdotto.cs" />
+    <Compile Include="Finanziaria\Pratiche\ObiettiviXCategoriaProdotto\CObiettivoCategoriaProdottoCursor.cs" />
+    <Compile Include="Finanziaria\Preventivi\Offerte\COffertaCQSCalculator.cs" />
+    <Compile Include="Finanziaria\Preventivi\Offerte\Evaluators\CCQSPDProvvigioneXOffertaUrlEvaluator.cs" />
+    <Compile Include="Finanziaria\Preventivi\Offerte\Evaluators\CCQSPDProvvigioneXOffertaEvaluator.cs" />
+    <Compile Include="Finanziaria\Preventivi\Offerte\ProvvigioneXOfferta\CCQSPDProvvigioneXOfferta.cs" />
+    <Compile Include="Finanziaria\Preventivi\Offerte\ProvvigioneXOfferta\CCQSPDProvvigioneXOffertaCollection.cs" />
+    <Compile Include="Finanziaria\Preventivi\Offerte\ProvvigioneXOfferta\CCQSPDProvvigioneXOffertaCursor.cs" />
+    <Compile Include="Finanziaria\Prodotti\CategorieProdotto\CCategoriaProdotto.cs" />
+    <Compile Include="Finanziaria\Prodotti\CategorieProdotto\CategorieProdottoClass.cs" />
+    <Compile Include="Finanziaria\Prodotti\CategorieProdotto\CCategorieProdottoCursor.cs" />
+    <Compile Include="Finanziaria\RichiestaApprovazioneGroup\RichiesteApprovazioneCollection.cs" />
+    <Compile Include="Finanziaria\RichiestaApprovazioneGroup\RichiestaApprovazioneGroupClass.cs" />
+    <Compile Include="Finanziaria\RichiestaApprovazioneGroup\RichiestaApprovazioneGroup.cs" />
+    <Compile Include="Finanziaria\RichiestaApprovazioneGroup\RichiestaApprovazioneGroupCursor.cs" />
+    <Compile Include="Finanziaria\StatisticheLavorazione\CQSPD.cs" />
+    <Compile Include="Finanziaria\StatisticheLavorazione\CStatsItem.cs" />
+    <Compile Include="Finanziaria\StatisticheLavorazione\CQSPDCPHSTATINFO.cs" />
+    <Compile Include="Finanziaria\StatisticheLavorazione\CQSPDInfoAnalisiAnomalie.cs" />
+    <Compile Include="Finanziaria\StatisticheLavorazione\StatisticheLavorazione.cs" />
+    <Compile Include="Finanziaria\StatisticheLavorazione\StatisticaLavorazione.cs" />
+    <Compile Include="Finanziaria\TipiProvvigione\CQSPDTipoProvvigioneCollection.cs" />
+    <Compile Include="Finanziaria\TipiProvvigione\CCQSPDTipoProvvigioneCursor.cs" />
+    <Compile Include="Finanziaria\TipiProvvigione\CCQSPDTipoProvvigione.cs" />
+    <Compile Include="Finanziaria\Prodotti\ConvenzioniXProdotto\CProdottoXConvenzione.cs" />
+    <Compile Include="Finanziaria\Prodotti\ConvenzioniXProdotto\CProdottoXConvenzioneCollection.cs" />
+    <Compile Include="Finanziaria\Prodotti\ConvenzioniXProdotto\CProdottoXConvenzioneCursor.cs" />
+    <Compile Include="Finanziaria\Prodotti\TabelleAssicurativeXProdotto\CProdottoXTabellaAss.cs" />
+    <Compile Include="Finanziaria\Prodotti\TabelleAssicurativeXProdotto\CProdottoXTabellaAssCursor.cs" />
+    <Compile Include="Finanziaria\Prodotti\TabelleAssicurativeXProdotto\CTabelleAssicurativeProdottoCollection.cs" />
+    <Compile Include="Finanziaria\RichiesteDeroghe\CRichiestaDeroga.cs" />
+    <Compile Include="Finanziaria\RichiesteDeroghe\CRichiestaDerogaCursor.cs" />
+    <Compile Include="Finanziaria\RichiesteDeroghe\RichiesteDeroghe.cs" />
+    <Compile Include="Finanziaria\ValutazioneAzienda\CQSPDValutazioneAssicurazione.cs" />
+    <Compile Include="Finanziaria\ValutazioneAzienda\CQSPDValutazioneAzienda.cs" />
+    <Compile Include="Finanziaria\ValutazioneAzienda\CQSPDValutazioniAziendaModule.cs" />
+    <Compile Include="Finanziaria\ValutazioneAzienda\CQSPDValutazioneAziendaCursor.cs" />
+    <Compile Include="Finanziaria\VerificheAmministrative\IOggettoVerificabile.cs" />
+    <Compile Include="Finanziaria\VerificheAmministrative\VerificaAmministrativa.cs" />
+    <Compile Include="Finanziaria\VerificheAmministrative\VerificheAmministrativeCursor.cs" />
+    <Compile Include="Finanziaria\VerificheAmministrative\VerificheAmministrative.cs" />
+    <Compile Include="Finanziaria\CTAEGCalculator.cs" />
+    <Compile Include="Finanziaria\CTANInverter.cs" />
+    <Compile Include="Finanziaria\CTANFunEvaluator.cs" />
+    <Compile Include="Finanziaria\Handlers\StoricoHandlerStudiF.cs" />
+    <Compile Include="Finanziaria\Handlers\StoricoHandlerRichFin.cs" />
+    <Compile Include="Finanziaria\Handlers\StoricoHandlerPratiche.cs" />
+    <Compile Include="Finanziaria\Handlers\FindPersonaByNumeroPratica.cs" />
+    <Compile Include="Finanziaria\Handlers\StoricoHandlerRichiesteConteggiEstintivi - Copia.cs" />
+    <Compile Include="Finanziaria\Handlers\StoricoElaborazioni.cs" />
+    <Compile Include="Finanziaria\Pratiche\Statistiche\ClientiLavorati\ClientiLavoratiFilter.cs" />
+    <Compile Include="Finanziaria\Pratiche\Statistiche\ClientiLavorati\ClientiLavoratiStats.cs" />
+    <Compile Include="Finanziaria\Pratiche\Statistiche\ClientiLavorati\ClientiLavoratiStatsItem.cs" />
+    <Compile Include="Finanziaria\Pratiche\Statistiche\ClientiLavorati\ClientiLavoratiStatsItemCursor.cs" />
+    <Compile Include="Finanziaria\Pratiche\Statistiche\CQSFastStats.cs" />
+    <Compile Include="Finanziaria\Pratiche\Statistiche\CQSFilter.cs" />
+    <Compile Include="Finanziaria\Pratiche\Statistiche\Liquidato\LiquidatoFilter.cs" />
+    <Compile Include="Finanziaria\Pratiche\Statistiche\Liquidato\LiquidatoStats.cs" />
+    <Compile Include="Finanziaria\Pratiche\Statistiche\Liquidato\LiquidatoStatsItem.cs" />
+    <Compile Include="Finanziaria\RichiestaApprovazioneGroup\RichiesteApprovazione\CRichiesteApprovazioneClass.cs" />
+    <Compile Include="Finanziaria\RichiestaApprovazioneGroup\RichiesteApprovazione\IOggettoApprovabile.cs" />
+    <Compile Include="Finanziaria\RichiestaApprovazioneGroup\RichiesteApprovazione\CRichiestaApprovazione.cs" />
+    <Compile Include="Finanziaria\RichiestaApprovazioneGroup\RichiesteApprovazione\CRichiestaApprovazioneCursor.cs" />
+    <Compile Include="Finanziaria\Pratiche\CInfoStato.cs" />
+    <Compile Include="Finanziaria\RichiestaApprovazioneGroup\RichiesteApprovazione\MotiviSconto\CMotiviScontoPraticaClass.cs" />
+    <Compile Include="Finanziaria\RichiestaApprovazioneGroup\RichiesteApprovazione\MotiviSconto\CMotivoScontoPratica.cs" />
+    <Compile Include="Finanziaria\RichiestaApprovazioneGroup\RichiesteApprovazione\MotiviSconto\CMotivoScontoPraticaCursor.cs" />
+    <Compile Include="Finanziaria\Pratiche\ObiettiviXProdotto\CObiettivoPratica.cs" />
+    <Compile Include="Finanziaria\Pratiche\ObiettiviXProdotto\CObiettivoPraticaCursor.cs" />
+    <Compile Include="Finanziaria\Pratiche\ObiettiviXProdotto\CObiettiviPraticaClass.cs" />
+    <Compile Include="Finanziaria\Profili\GroupAllowNegate\CProfiloXGroupAllowNegate.cs" />
+    <Compile Include="Finanziaria\Profili\GroupAllowNegate\CProfiloXGroupAllowNegateCollection.cs" />
+    <Compile Include="Finanziaria\Profili\GroupAllowNegate\CProfiloXGroupAllowNegateCursor.cs" />
+    <Compile Include="Finanziaria\Profili\UserAllowNegate\CProfiloXUserAllowNegate.cs" />
+    <Compile Include="Finanziaria\Profili\UserAllowNegate\CProfiloXUserAllowNegateCollection.cs" />
+    <Compile Include="Finanziaria\Profili\UserAllowNegate\CProfiloXUserAllowNegateCursor.cs" />
+    <Compile Include="Finanziaria\AltriPreventivi\CAltroPreventivo.cs" />
+    <Compile Include="Finanziaria\AltriPreventivi\CAltroPreventivoCursor.cs" />
+    <Compile Include="Finanziaria\AltriPreventivi\PreventiviXRichiesta\CAltriPreventiviXRichiesta.cs" />
+    <Compile Include="Finanziaria\RichiesteConteggiEstintivi\RichiesteConteggi.cs" />
+    <Compile Include="Finanziaria\RichiesteConteggiEstintivi\CRichiesteConteggiXRichiesta.cs" />
+    <Compile Include="Finanziaria\RichiesteConteggiEstintivi\CRichiestaConteggio.cs" />
+    <Compile Include="Finanziaria\RichiesteConteggiEstintivi\CRichiestaConteggioCursor.cs" />
+    <Compile Include="Finanziaria\SituazionePersona\CQSPSituazionePersona.cs" />
+    <Compile Include="Finanziaria\SituazioneUfficio\CQSPSituazioneUfficio.cs" />
+    <Compile Include="Finanziaria\StudiDiFattibilita\CQSPDSoluzioniXStudioDiFattibilita.cs" />
+    <Compile Include="Finanziaria\StudiDiFattibilita\StudiDiFattibilita.cs" />
+    <Compile Include="Finanziaria\StudiDiFattibilita\CQSPDStudioDiFattibilita.cs" />
+    <Compile Include="Finanziaria\StudiDiFattibilita\CQSPDStudiDiFattibilitaCursor.cs" />
+    <Compile Include="Finanziaria\Convenzioni\Convenzioni.cs" />
+    <Compile Include="Finanziaria\Convenzioni\CQSPDConvenzioniCursor.cs" />
+    <Compile Include="Finanziaria\Convenzioni\CQSPDConvenzione.cs" />
+    <Compile Include="Finanziaria\GruppiProdotto\DocumentiXGruppoProdotti\CDocumentiXGruppoProdottiCursor.cs" />
+    <Compile Include="Finanziaria\GruppiProdotto\DocumentiXGruppoProdotti\VincoloProdotto.cs" />
+    <Compile Include="Finanziaria\GruppiProdotto\DocumentiXGruppoProdotti\CDocumentiXGruppoProdottiCollection.cs" />
+    <Compile Include="Finanziaria\Pratiche\Azioni\CQSPDVisualizzaPratica.cs" />
+    <Compile Include="Finanziaria\RichiesteFinanziamenti\Azioni\PrendiInCaricoRichiestaFinanziamento.cs" />
+    <Compile Include="Finanziaria\RichiesteAssegni\CBeneficiarioRichiestaAssegni.cs" />
+    <Compile Include="Finanziaria\RichiesteAssegni\CBeneficiariCollection.cs" />
+    <Compile Include="Finanziaria\RichiesteAssegni\CRichiestaAssegniCursor.cs" />
+    <Compile Include="Finanziaria\RichiesteAssegni\CRichiestaAssegni.cs" />
+    <Compile Include="Finanziaria\Tabelle Assicurative\TabelleAssicurative.cs" />
+    <Compile Include="Finanziaria\Prodotti\TabelleSpeseXProdotto\CProdottoXTabellaSpesaCollection.cs" />
+    <Compile Include="Finanziaria\Prodotti\TabelleSpeseXProdotto\CProdottoXTabellaSpesaCursor.cs" />
+    <Compile Include="Finanziaria\Prodotti\TabelleSpeseXProdotto\CProdottoXTabellaSpesa.cs" />
+    <Compile Include="Finanziaria\Tabelle Assicurative\CTabelleAssicurativeCursor.cs" />
+    <Compile Include="Finanziaria\Tabelle Assicurative\CTabellaAssicurativa.cs" />
+    <Compile Include="Finanziaria\Prodotti\VincoliProdottoTabellaAss\CProdTabAssConstraintCursor.cs" />
+    <Compile Include="Finanziaria\Prodotti\VincoliProdottoTabellaAss\CProdTabAssConstraint.cs" />
+    <Compile Include="Finanziaria\Prodotti\VincoliProdottoTabellaAss\CVincoliProdottoTabellaAss.cs" />
+    <Compile Include="Finanziaria\TeamManagers\CTeamManagersCursor.cs" />
+    <Compile Include="Finanziaria\TeamManagers\CTeamManager.cs" />
+    <Compile Include="Finanziaria\TeamManagers\TeamManagers.cs" />
+    <Compile Include="Finanziaria\Collaboratori\TrattativeCollaboratore\CTrattativeCollaboratore.cs" />
+    <Compile Include="Finanziaria\Collaboratori\TrattativeCollaboratore\CTrattativeCollaboratoreCursor.cs" />
+    <Compile Include="Finanziaria\Collaboratori\TrattativeCollaboratore\CTrattativaCollaboratore.cs" />
+    <Compile Include="Finanziaria\Collaboratori\TrattativeCollaboratore\TrattativeCollaboratore.cs" />
+    <Compile Include="Finanziaria\CTAEGFunEvaluator.cs" />
+    <Compile Include="Finanziaria\CTEGFunEvaluator.cs" />
+    <Compile Include="Finanziaria\TeamManagers\CCollaboratoreCollection.cs" />
+    <Compile Include="Finanziaria\Collaboratori\CCollaboratore.cs" />
+    <Compile Include="Finanziaria\Collaboratori\CCollaboratoriCursor.cs" />
+    <Compile Include="Finanziaria\Collaboratori\Collaboratori.cs" />
+    <Compile Include="Finanziaria\Collaboratori\Fonte\CollaboratoriFonteProvider.cs" />
+    <Compile Include="Finanziaria\Collaboratori\Pratiche\CPratichePerCollabCollection.cs" />
+    <Compile Include="Finanziaria\Pratiche\DocumentiXPratica\CDocumentoPraticaCaricato.cs" />
+    <Compile Include="Finanziaria\Pratiche\DocumentiXPratica\CDocumentoPraticaCaricatoCursor.cs" />
+    <Compile Include="Finanziaria\Pratiche\DocumentiXPratica\CDocumentoPraticaCaricatoCollection.cs" />
+    <Compile Include="Finanziaria\CTAEGInverter.cs" />
+    <Compile Include="Finanziaria\CTANCalculator.cs" />
+    <Compile Include="Finanziaria\Cessionari\CCQSPDCessionarioClass.cs" />
+    <Compile Include="Finanziaria\Cessionari\Cessionari.cs" />
+    <Compile Include="Finanziaria\Cessionari\CCessionariCursor.cs" />
+    <Compile Include="Finanziaria\Statistiche\COpStatRecord.cs" />
+    <Compile Include="Finanziaria\Config\Config.cs" />
+    <Compile Include="Finanziaria\Consulenti\Consulenti.cs" />
+    <Compile Include="Finanziaria\Consulenti\CConsulentePratica.cs" />
+    <Compile Include="Finanziaria\Consulenti\CConsulentiPraticaCursor.cs" />
+    <Compile Include="Finanziaria\StudiDiFattibilita\Soluzioni\CQSPDConsulenzaCursor.cs" />
+    <Compile Include="Finanziaria\StudiDiFattibilita\Soluzioni\CQSPDConsulenza.cs" />
+    <Compile Include="Finanziaria\StudiDiFattibilita\Soluzioni\Consulenze.cs" />
+    <Compile Include="Finanziaria\EstinzioniXEstintore\IEstintore.cs" />
+    <Compile Include="Finanziaria\EstinzioniXEstintore\EstinzioneXEstintoreCursor.cs" />
+    <Compile Include="Finanziaria\EstinzioniXEstintore\EstinzioneXEstintore.cs" />
+    <Compile Include="Finanziaria\StudiDiFattibilita\Soluzioni\OffertePropostePerConsulenza.cs" />
+    <Compile Include="Finanziaria\Costi\CCosto.cs" />
+    <Compile Include="Finanziaria\Estinzioni\CEstinzione.cs" />
+    <Compile Include="Finanziaria\Estinzioni\CEstinzioniCursor.cs" />
+    <Compile Include="Finanziaria\EstinzioniXEstintore\CEstinzioniXEstintoreCollection.cs" />
+    <Compile Include="Finanziaria\Estinzioni\CEstinzioneCalculator.cs" />
+    <Compile Include="Finanziaria\Estinzioni\EstinzioneXPersona\CEstinzioniPersona.cs" />
+    <Compile Include="Finanziaria\Estinzioni\Estinzioni.cs" />
+    <Compile Include="Finanziaria\GruppiProdotto\CGruppoProdotti.cs" />
+    <Compile Include="Finanziaria\GruppiProdotto\CGruppoProdottiCursor.cs" />
+    <Compile Include="Finanziaria\GruppiProdotto\GruppiProdotto.cs" />
+    <Compile Include="Finanziaria\Pratiche\InfoPratica\CInfoPratica.cs" />
+    <Compile Include="Finanziaria\Pratiche\InfoPratica\CInfoPraticaCursor.cs" />
+    <Compile Include="Finanziaria\Pratiche\InfoPratica\InfoPratica.cs" />
+    <Compile Include="Finanziaria\Pratiche\StatiLavorazionePratica\CStatiLavorazionePraticaCollection.cs" />
+    <Compile Include="Finanziaria\Pratiche\StatiLavorazionePratica\CStatiLavorazionePraticaCursor.cs" />
+    <Compile Include="Finanziaria\Pratiche\StatiLavorazionePratica\StatiLavorazionePratica.cs" />
+    <Compile Include="Finanziaria\Pratiche\StatiPratica\CStatoPraticaCursor.cs" />
+    <Compile Include="Finanziaria\Pratiche\StatiPratica\CStatoPratica.cs" />
+    <Compile Include="Finanziaria\Pratiche\StatiPratica\VincoliStatoPratica\CStatoPratRuleCursor.cs" />
+    <Compile Include="Finanziaria\Pratiche\StatiPratica\VincoliStatoPratica\CStatoPratRule.cs" />
+    <Compile Include="Finanziaria\Pratiche\StatiPratica\VincoliStatoPratica\CStatoPratRulesCollection.cs" />
+    <Compile Include="Finanziaria\Pratiche\StatiPratica\VincoliStatoPratica\StatiPratRules.cs" />
+    <Compile Include="Finanziaria\Preventivi\CPreventivo.cs" />
+    <Compile Include="Finanziaria\Preventivi\CPreventivoCursor.cs" />
+    <Compile Include="Finanziaria\Preventivi\Preventivi.cs" />
+    <Compile Include="Finanziaria\Profili\CProfiloComparer.cs" />
+    <Compile Include="Finanziaria\Profili\CProfiliCursor.cs" />
+    <Compile Include="Finanziaria\Profili\CProfilo.cs" />
+    <Compile Include="Finanziaria\Profili\Profili.cs" />
+    <Compile Include="Finanziaria\Prodotti\CCQSPDProdotto.cs" />
+    <Compile Include="Finanziaria\Prodotti\Prodotti.cs" />
+    <Compile Include="Finanziaria\Prodotti\CProdottiCursor.cs" />
+    <Compile Include="Finanziaria\Prodotti\CProdottoComparer.cs" />
+    <Compile Include="Finanziaria\Preventivi\Offerte\COffertaCQS.cs" />
+    <Compile Include="Finanziaria\Preventivi\Offerte\CCQSPDOfferteCursor.cs" />
+    <Compile Include="Finanziaria\Preventivi\Offerte\CCQSPDOfferte.cs" />
+    <Compile Include="Finanziaria\Preventivi\Offerte\Offerte.cs" />
+    <Compile Include="Finanziaria\Pratiche\CPraticheCollection.cs" />
+    <Compile Include="Finanziaria\Pratiche\Pratiche.cs" />
+    <Compile Include="Finanziaria\Pratiche\CPraticaCQSPD.cs" />
+    <Compile Include="Finanziaria\Profili\ProdottiXProfilo\CProdottiXProfiloRelations.cs" />
+    <Compile Include="Finanziaria\Profili\ProdottiXProfilo\CProdottoProfilo.cs" />
+    <Compile Include="Finanziaria\Profili\ProdottiXProfilo\CProdottoProfiloCursor.cs" />
+    <Compile Include="Finanziaria\RichiesteFinanziamenti\RichiesteFinanziamento.cs" />
+    <Compile Include="Finanziaria\RichiesteFinanziamenti\CRichiestaFinanziamento.cs" />
+    <Compile Include="Finanziaria\Pratiche\StatiLavorazionePratica\CStatoLavorazionePratica.cs" />
+    <Compile Include="Finanziaria\Pratiche\StatiPratica\StatiPratica.cs" />
+    <Compile Include="Finanziaria\Pratiche\CPraticheCQSPDCursor.cs" />
+    <Compile Include="Finanziaria\Prodotti\VincoliProdottoTabellaFin\CProdTabFinConstraintCursor.cs" />
+    <Compile Include="Finanziaria\Prodotti\VincoliProdottoTabellaFin\CProdTabFinConstraint.cs" />
+    <Compile Include="Finanziaria\Prodotti\TabelleFinanziarieXProdotti\CTabelleFinanziarieProdottoCollection.cs" />
+    <Compile Include="Finanziaria\Prodotti\VincoliProdottoTabellaFin\CVincoliProdottoTabellaFin.cs" />
+    <Compile Include="Finanziaria\Prodotti\TabelleFinanziarieXProdotti\CProdottoXTabellaFinCursor.cs" />
+    <Compile Include="Finanziaria\Prodotti\TabelleFinanziarieXProdotti\CProdottoXTabellaFin.cs" />
+    <Compile Include="Finanziaria\Tabelle Finanziarie\CTabellaFinanziaria.cs" />
+    <Compile Include="Finanziaria\Tabelle Finanziarie\TabelleFinanziarie.cs" />
+    <Compile Include="Finanziaria\Tabelle Finanziarie\CTabelleFinanziarieCursor.cs" />
+    <Compile Include="Finanziaria\Vincoli su Tabelle\CTableConstraintCursor.cs" />
+    <Compile Include="Finanziaria\Vincoli su Tabelle\CTableConstraint.cs" />
+    <Compile Include="Finanziaria\Tabelle Spese\TabelleSpese.cs" />
+    <Compile Include="Finanziaria\Tabelle Spese\CTabellaSpeseCursor.cs" />
+    <Compile Include="Finanziaria\Tabelle Spese\CTabellaSpese.cs" />
+    <Compile Include="Finanziaria\Tabelle TEG Max\CQSPDRigheTEGMax.cs" />
+    <Compile Include="Finanziaria\Tabelle TEG Max\CRigaTEGMax.cs" />
+    <Compile Include="Finanziaria\Tabelle TEG Max\CRigheTEGMaxCursor.cs" />
+    <Compile Include="Finanziaria\Tabelle TEG Max\CTabellaTEGMax.cs" />
+    <Compile Include="Finanziaria\Tabelle TEG Max\CTabelleTEGMaxCursor.cs" />
+    <Compile Include="Finanziaria\Tabelle TEG Max\TabelleTEGMax.cs" />
+    <Compile Include="Finanziaria\TipiContratto\CTipoContrattoCursor.cs" />
+    <Compile Include="Finanziaria\TipiContratto\CTipoContratto.cs" />
+    <Compile Include="Finanziaria\TipiContratto\TipiContratto.cs" />
+    <Compile Include="Finanziaria\RichiesteAssegni\RichiestaAssegni.cs" />
+    <Compile Include="Finanziaria\RichiesteFinanziamenti\CRichiesteFinanziamentoCursor.cs" />
+    <Compile Include="My Project\AssemblyInfo.cs" />
+    <Compile Include="My Project\Application.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="Finanziaria\Finanziaria.cs" />
+    <Compile Include="Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Finanziaria\Zona\CZona.cs" />
+    <Compile Include="Finanziaria\Zona\CZonaCursor.cs" />
+    <Compile Include="Finanziaria\Zona\Zone.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>minidom.My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>minidom.My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\CommonProjects\DMDCore\DMDCore.csproj">
+      <Project>{6bc7376f-f45b-4e4b-be89-8d8378a6384c}</Project>
+      <Name>DMDCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MiniDOMBase\MiniDOMBase.csproj">
+      <Project>{6431c469-2ba1-020d-24cd-a12fcd7943ab}</Project>
+      <Name>MiniDOMBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MiniDOMOffice\MiniDOMOffice.csproj">
+      <Project>{1da1e6c8-7d0c-00e5-28af-e84c316d669d}</Project>
+      <Name>MiniDOMOffice</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

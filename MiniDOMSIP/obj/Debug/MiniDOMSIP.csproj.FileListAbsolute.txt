@@ -1,0 +1,4 @@
+C:\TFS\DMDShop2\MiniDOM\MiniDOMSIP\obj\Debug\MiniDOMSIP.csproj.AssemblyReference.cache
+C:\TFS\DMDShop2\MiniDOM\MiniDOMSIP\obj\Debug\minidom.diallib.Resources.resources
+C:\TFS\DMDShop2\MiniDOM\MiniDOMSIP\obj\Debug\MiniDOMSIP.csproj.GenerateResource.cache
+C:\TFS\DMDShop2\MiniDOM\MiniDOMSIP\obj\Debug\MiniDOMSIP.csproj.CoreCompileInputs.cache

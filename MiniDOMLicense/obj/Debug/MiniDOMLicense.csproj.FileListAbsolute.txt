@@ -1,0 +1,6 @@
+C:\TFS\DMDShop2\MiniDOM\MiniDOMLicense\obj\Debug\MiniDOMLicense.csproj.AssemblyReference.cache
+C:\TFS\DMDShop2\MiniDOM\MiniDOMLicense\obj\Debug\MiniDOM.frmActivation.resources
+C:\TFS\DMDShop2\MiniDOM\MiniDOMLicense\obj\Debug\MiniDOMLicense.frmMain.resources
+C:\TFS\DMDShop2\MiniDOM\MiniDOMLicense\obj\Debug\MiniDOMLicense.Properties.Resources.resources
+C:\TFS\DMDShop2\MiniDOM\MiniDOMLicense\obj\Debug\MiniDOMLicense.csproj.GenerateResource.cache
+C:\TFS\DMDShop2\MiniDOM\MiniDOMLicense\obj\Debug\MiniDOMLicense.csproj.CoreCompileInputs.cache
